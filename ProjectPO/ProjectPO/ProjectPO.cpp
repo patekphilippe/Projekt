@@ -6,6 +6,7 @@
 int main()
 {
 	std::cout << "KUBA";
+	std::cout << "OLA";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
