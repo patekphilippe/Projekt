@@ -6,7 +6,7 @@
 int main()
 {
 	std::cout << "KUBA1";
-	std::cout << "OLA";
+	std::cout << "OLA1";
 
 }
 
