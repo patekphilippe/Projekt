@@ -1,0 +1,9 @@
+﻿  World.cpp
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(15,20): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(21,20): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(23,22): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(39,20): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(41,22): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(57,20): warning C4018:  '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(59,22): warning C4018:  '<': signed/unsigned mismatch
+  ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe
