@@ -1,5 +1,4 @@
 #pragma once
-<<<<<<< HEAD
 #include "Citizen.h"
 #include "Soldier.h"
 #include "MedicalStaff.h"
@@ -23,6 +22,7 @@ public:
 	void makeBaby();
 	void infectHuman();
 	void killZombie();
+	World ();
 	World(int deaths , int survivors, int infected);
 	void getDeaths();
 	void getSurvivors();
