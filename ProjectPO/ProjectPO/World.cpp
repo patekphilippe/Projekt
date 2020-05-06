@@ -1,4 +1,5 @@
 #include "World.h"
+<<<<<<< HEAD
 void World::setPopulation() {
 	for (int i = 0; i < 100; i++) {
 		int ID = rand() % 4;
@@ -68,4 +69,34 @@ void World::killZombie() {
 			}
 		}
 	}
+=======
+
+
+World::World(int deaths = 0, int survivors = 0, int infected = 0) 
+{
+	this -> deaths = deaths;
+	this -> survivors = survivors;
+	this -> infected = infected;
+}
+
+void World::getDeaths()
+{
+}
+
+void World::getSurvivors()
+{
+}
+
+void World::getInfected()
+{
+}
+
+void World::makeDiagram(int populaton , int deaths, int active_cases)
+{
+	
+}
+
+World::~World()
+{
+>>>>>>> e1fa80ab151c2d067e2a84dfc388adaf8a50acfc
 }

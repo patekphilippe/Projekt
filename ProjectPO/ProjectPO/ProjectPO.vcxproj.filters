@@ -18,6 +18,7 @@
     <ClCompile Include="ProjectPO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Citizen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -30,11 +31,14 @@
     <ClCompile Include="MedicalStaff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> e1fa80ab151c2d067e2a84dfc388adaf8a50acfc
     <ClCompile Include="World.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClInclude Include="Citizen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -47,6 +51,8 @@
     <ClInclude Include="MedicalStaff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> e1fa80ab151c2d067e2a84dfc388adaf8a50acfc
     <ClInclude Include="World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
