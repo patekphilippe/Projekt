@@ -154,6 +154,7 @@
     <ClCompile Include="Citizen.cpp" />
     <ClCompile Include="MedicalStaff.cpp" />
     <ClCompile Include="ProjectPO.cpp" />
+    <ClCompile Include="Region.cpp" />
     <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="World.cpp" />
     <ClCompile Include="Zombie.cpp" />
@@ -161,12 +162,11 @@
   <ItemGroup>
     <ClInclude Include="Citizen.h" />
     <ClInclude Include="MedicalStaff.h" />
+    <ClInclude Include="Region.h" />
     <ClInclude Include="Soldier.h" />
     <ClInclude Include="World.h" />
     <ClInclude Include="Zombie.h" />
-
   </ItemGroup>
-  
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

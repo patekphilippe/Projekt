@@ -3,6 +3,7 @@
 #include "Soldier.h"
 #include "MedicalStaff.h"
 #include "Zombie.h"
+#include "Region.h"
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
