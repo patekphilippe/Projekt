@@ -4,6 +4,10 @@
 #include "MedicalStaff.h"
 #include "Zombie.h"
 #include "Region.h"
+#include "Virus.h"
+#include "RespiratoryVirus.h"
+#include "NerveVirus.h"
+#include "ReproductiveVirus.h"
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
