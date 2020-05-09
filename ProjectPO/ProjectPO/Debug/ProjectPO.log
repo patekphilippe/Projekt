@@ -1,9 +1,33 @@
-﻿  World.cpp
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(16,20): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(22,20): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(24,22): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(40,20): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(42,22): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(58,20): warning C4018:  '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(60,22): warning C4018:  '<': signed/unsigned mismatch
-  ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe
+﻿  Citizen.cpp
+  MedicalStaff.cpp
+  NerveVirus.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\NerveVirus.cpp(3,67): error C2512: "Virus": niedostępny odpowiedni konstruktor domyślny
+  ProjectPO.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Virus.h(9,7): message : zobacz deklarację „Virus”
+  Region.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\ProjectPO.cpp(17,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Region.cpp(4): error C2548: „Region::Region”: brak domyślnego argumentu dla parametru 3
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Region.cpp(4): error C2548: „Region::Region”: brak domyślnego argumentu dla parametru 4
+  ReproductiveVirus.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Region.cpp(28,44): fatal error C1903: nie można odzyskać od poprzedniego błędu(ów); zatrzymywanie kompilacji
+C:\Simulation\Projekt\ProjectPO\ProjectPO\ReproductiveVirus.cpp(4,88): error C2512: "Virus": niedostępny odpowiedni konstruktor domyślny
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Virus.h(9,7): message : zobacz deklarację „Virus”
+  RespiratoryVirus.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\ReproductiveVirus.cpp(14,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Simulation\Projekt\ProjectPO\ProjectPO\RespiratoryVirus.cpp(3,79): error C2512: "Virus": niedostępny odpowiedni konstruktor domyślny
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Virus.h(9,7): message : zobacz deklarację „Virus”
+C:\Simulation\Projekt\ProjectPO\ProjectPO\RespiratoryVirus.cpp(12,13): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Soldier.cpp
+  Virus.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\RespiratoryVirus.cpp(19,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  World.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\Virus.cpp(16,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(16,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(22,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(24,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(40,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(42,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(58,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  Zombie.cpp
+  Generowanie kodu...
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(60,22): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
