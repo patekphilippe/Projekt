@@ -25,7 +25,7 @@ public:
 	float getEconomics();
 	string getSeason();
 	int getPopulation();
-	string getNameOfRegion(int);
+	string getNameOfRegion();
 	
 };
 

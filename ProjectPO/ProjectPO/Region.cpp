@@ -20,37 +20,13 @@ string Region::getSeason()
 {
 	return this->season;
 }
-string Region::getNameOfRegion(int opcja)
+string Region::getNameOfRegion()
 {
-	switch (opcja)
-	{
-	case 0:
-		Region * kontynent = new Region("Afryka");
-		break;
-	case 1:
-		Region * kontynent = new Region("Azja");
-		break;
-	case 2:
-		Region * kontynent = new Region("Ameryka pó³nocna");
-		break;
-	case 3:
-		Region * kontynent = new Region("Ameryka po³udniowa");
-		break;
-	case 4:
-		Region * kontynent = new Region("Europa");
-		break;
-	case 5:
-		Region * kontynent = new Region("Australia");
-		break;
-	case 6:
-		Region * kontynent = new Region("Antarktyda");
-		break;
-	}
 	return this->nameOfRegion;
 }
 int Region::getPopulation()
 {
-	
+	return this->population;
 }
 Region::~Region(){}
 
