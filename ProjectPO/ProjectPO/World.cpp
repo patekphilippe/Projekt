@@ -91,23 +91,6 @@ void World::makeBaby() {
 	}
 }
 
-void World::killZombie() {
-	for (int i = 0; i < population.size(); i++) {
-		if (population[i]->getName() == "Soldier") {
-			for (int y = 0; y < population.size(); y++) {
-				if (population[y]->getName() == "Zombie") {
-					int chanceofBeingSucces = rand() % 100;
-					if (chanceofBeingSucces > 50) {
-						population.erase(population.begin() + y);
-						i = i + 1;
-						break;
-					}
-				}
-			}
-		}
-	}
-}
-
 void World::transmitVirus() {
 	for (int i = 0; i < this->regions.size(); i++) {
 		for (int y = 0; y < this->regions[i]->population.size(); y++) {
