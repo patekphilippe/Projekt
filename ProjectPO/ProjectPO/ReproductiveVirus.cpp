@@ -1,18 +1,14 @@
 #include "ReproductiveVirus.h"
  
 
-ReproductiveVirus::ReproductiveVirus (int infertinity, int infected, string virusName) {
-	this->iscurable = true;
+ReproductiveVirus::ReproductiveVirus (string virusName, bool iscurable, int mutation) {
 	this->death = 0;
-	this->infected = infected;
-	this->mutation = 2;
 	this->virusName = virusName;
-	this->infertility = infertinity;
+	this->iscurable = iscurable;
+	this->mutation = mutation;
 }
 
 int ReproductiveVirus::ability() {
-	srand(time(NULL));
-	infertility = -(rand() % 10);
-	return infertility;
+	return 0;
 }
 ReproductiveVirus::~ReproductiveVirus(){}

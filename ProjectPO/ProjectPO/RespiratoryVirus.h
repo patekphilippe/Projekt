@@ -5,7 +5,7 @@
 class RespiratoryVirus : public Virus {
 public:
 	~RespiratoryVirus();
-	RespiratoryVirus(int, int, string);
+	RespiratoryVirus(string, bool, int);
 	int ability();
 	bool kill();
 };

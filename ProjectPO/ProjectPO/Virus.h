@@ -16,11 +16,13 @@ protected:
 	int infected;
 public:
 	~Virus();
-	Virus(int, int ,int ,bool ,int ,string );
+	Virus();
+	Virus(string, bool, int);
 	int getAttack();
 	int getMutation();
 	int getDeathNumb();
 	int getInfectedNumb();
+	string getVirusName();
 	string setVirusName();
 	virtual int ability() = 0;
 };

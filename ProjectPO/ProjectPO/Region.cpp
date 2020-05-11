@@ -1,10 +1,10 @@
 #include "Region.h"
-
-Region::Region(string nameOfRegion, string season="spring", int population, float economics) 
+Region::Region() {};
+Region::Region(string nameOfRegion, int population, int economics)
 {
 	this->nameOfRegion = nameOfRegion;
-	this->season = season;
-	this->population;
+	this->season = "spring";
+	this->population_amount = population;
 	this->economics = economics;
 }
 
@@ -12,7 +12,7 @@ string Region::getClimate()
 {
 	return this->climate;
 }
-float Region::getEconomics()
+int Region::getEconomics()
 {
 	return this->economics;
 }
@@ -24,9 +24,7 @@ string Region::getNameOfRegion()
 {
 	return this->nameOfRegion;
 }
-int Region::getPopulation()
+int Region::getPopulationAmount()
 {
-	return this->population;
+	return this->population_amount;
 }
-Region::~Region(){}
-

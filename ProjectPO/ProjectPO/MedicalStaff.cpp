@@ -4,7 +4,7 @@ MedicalStaff::MedicalStaff(int age, int immune, string profession, int health) {
 	this->age = age;
 	this->immune = immune;
 	this->profession = profession;
-	this->infection = false;
+	this->isInfected = false;
 	this->health = health;
 	this->fertile = 0;
 }

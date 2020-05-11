@@ -4,7 +4,7 @@
 class NerveVirus :public Virus {
 public:
 	~NerveVirus();
-	NerveVirus(int infected,int zombie,  string virusName);
+	NerveVirus(string, bool, int);
 	int ability();
 private:
 	int zombie;

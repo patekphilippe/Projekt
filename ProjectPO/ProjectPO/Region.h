@@ -8,23 +8,23 @@ using namespace std;
 class Region
 {
 	string climate;
-	float economics;
+	int economics;
 	string season;
 	string nameOfRegion;
-	
+	int population_amount;
 
 public:
 	
-	Region(string, string, int, float);
+	Region(string, int, int);
 	Region();
-	~Region() = default;
+	
 	void update();
 	
 	vector<Citizen*> population;
 	string getClimate();
-	float getEconomics();
+	int getEconomics();
 	string getSeason();
-	int getPopulation();
+	int getPopulationAmount();
 	string getNameOfRegion();
 	
 };

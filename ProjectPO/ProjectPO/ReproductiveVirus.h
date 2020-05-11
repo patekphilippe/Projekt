@@ -6,6 +6,6 @@ class ReproductiveVirus :public Virus {
 	int infertility;
 public:
 	~ReproductiveVirus();
-	ReproductiveVirus(int ,int, string );
+	ReproductiveVirus(string, bool, int);
     int ability();
 };

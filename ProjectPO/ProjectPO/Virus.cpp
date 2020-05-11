@@ -1,20 +1,17 @@
 #include "Virus.h"
+Virus::Virus() {};
 
-Virus::Virus(int attack, int mutation, int death, bool iscurable, int infected, string virusName) {
-	this->attack = attack;
-	this->mutation = mutation;
-	this->iscurable = iscurable;
-	this->death = death;
+Virus::Virus(string virusName, bool iscurable, int mutation) {
+	this->death = 0;
 	this->virusName = virusName;
+	this->iscurable = iscurable;
+	this->mutation = mutation;
 }
 
 int Virus::getAttack() {
 	return this->attack;
 }
-
-int Virus::getMutation() {  
-	srand(time(NULL));         
-	int mutation = rand() % 2 +1;    
+int Virus::getMutation() {
 	return this->mutation;
 }
 
@@ -24,6 +21,10 @@ int Virus::getDeathNumb() {
 
 int Virus::getInfectedNumb() {
 	return this->infected;
+}
+
+string Virus::getVirusName() {
+	return this->virusName;
 }
 
 string Virus::setVirusName() {

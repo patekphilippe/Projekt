@@ -1,15 +1,14 @@
 #include "NerveVirus.h"
 
-NerveVirus::NerveVirus(int infected,int zombie, string virusName) {
-	this->iscurable = true;
-	this->death = 0; 
-	this->infected = infected;
-	this->mutation = 3;
+NerveVirus::NerveVirus(string virusName, bool iscurable, int mutation) {
+	this->death = 0;
 	this->virusName = virusName;
-	this->zombie = zombie;
+	this->iscurable = iscurable;
+	this->mutation = mutation;
 }
 
 int NerveVirus::ability() {
-	return this->zombie;
+	int turnToZombie = rand() % 2;
+	return turnToZombie;
 }
 NerveVirus::~NerveVirus(){}

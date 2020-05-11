@@ -1,10 +1,11 @@
 #include "Soldier.h"
 Soldier::Soldier() {};
-Soldier::Soldier(int age, int immune, string profession, int health) {
+Soldier::Soldier(int age, int immune, string profession, int health, int damage) {
+	this->damage = damage;
 	this->age = age;
 	this->immune = immune;
 	this->profession = profession;
-	this->infection = false;
+	this->isInfected = false;
 	this->health = health;
 	this->fertile = 0;
 }

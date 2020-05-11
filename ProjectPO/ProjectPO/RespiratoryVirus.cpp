@@ -1,22 +1,18 @@
 #include "RespiratoryVirus.h"
 
-RespiratoryVirus::RespiratoryVirus(int death, int infected, string virusName) {
-	this->iscurable = true;
-	this->death = death;
-	this->infected = infected;
-	this->mutation = 1;
-	this->virusName =virusName;
+RespiratoryVirus::RespiratoryVirus(string virusName, bool iscurable, int mutation) {
+	this->death = 0;
+	this->virusName = virusName;
+	this->iscurable = iscurable;
+	this->mutation = mutation;
 }
 
 int RespiratoryVirus::ability() {
-	 srand(time(NULL));
-	 int n = rand() % 150;
-	 infected += n;
-	 return this->infected;
+	int lowerImmune = rand() % 10;
+	return -lowerImmune;
 }
 
 bool RespiratoryVirus::kill() {
-	srand(time(NULL));
 	int n = rand() % 10;
 	if (n <= 6) {
 		return 0;
