@@ -13,9 +13,9 @@ void World::setRegions() {
 	regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
 	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
 	regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
-	regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
-	regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
-	regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
+	//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
+	//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
+	//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
 
 	//ZALUDNIANIE REGIONOW
 	for (int i = 0; i < this->regions.size(); i++) {

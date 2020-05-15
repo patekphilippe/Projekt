@@ -69,7 +69,7 @@ int Window::setMenu() {
 							this->exit = 0;
 					}
 					else {
-						if (this->secondmenu[i] == "Repeat Simulation")
+						if (this->secondmenu[i] == "Repeat Simulation") 
 							openSimulation();
 						else if (this->secondmenu[i] == "Close Simulation")
 							this->exit = 0;
@@ -108,6 +108,7 @@ void Window::displayMenu() {
 }
 
 void Window::openSimulation() {
+
 	system("cls");
 	srand(time(NULL));
 	world.setRegions();
@@ -131,37 +132,37 @@ void Window::openSimulation() {
 		world.displayRegions();
 		world.turnToZombie();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.purgeZombies();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.impairHumanity();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.transmitVirus();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.healInfected();
 
-		//Sleep(2000);
+		Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.makeBaby();
@@ -182,8 +183,8 @@ void Window::showStatistics() {
 		cout << "\n----------------------------------\n";
 		cout << "Month " << i + 1 << endl;
 		cout << "Citizen: " << world.citizenStatistic[i] << endl;
-		cout << "Death:: " << world.deathStatistic[i] << endl;
-		cout << "Infected " << world.infectedStatistic[i] << endl;
+		cout << "Death: " << world.deathStatistic[i] << endl;
+		cout << "Infected: " << world.infectedStatistic[i] << endl;
 		cout << "Medical Staff: " << world.medicalStaffStatistic[i] << endl;
 		cout << "Zombie: " << world.zombieStatistic[i] << endl;
 		cout << "Soldier : " << world.soldierStatistic[i] << endl;
