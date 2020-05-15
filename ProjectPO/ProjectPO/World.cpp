@@ -11,11 +11,11 @@ World::World() {
 void World::setRegions() {
 	regions.push_back(new Region("Africa", rand() % 20 + 1, rand() % 100 + 1));
 	regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
+	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
+	regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
+	regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
+	regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
+	regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
 
 	//ZALUDNIANIE REGIONOW
 	for (int i = 0; i < this->regions.size(); i++) {
@@ -23,20 +23,21 @@ void World::setRegions() {
 			int randHuman = rand() % (regions[i]->getEconomics());
 			if (randHuman >= 15) {
 				if (rand() % 2) {
-					regions[i]->population.push_back(new Soldier(rand() % 100 + 1, immune(), "Soldier", rand() % 50 + 50, rand () % 50));
+					regions[i]->population.push_back(new Soldier(rand() % 100 + 1, 0, "Soldier", rand() % 50 + 50, rand () % 50));
 					this->soldierAmount++;
 				}
 				else {
-					regions[i]->population.push_back(new MedicalStaff(rand() % 100 + 1, immune(), "Medical Staff", rand() % 20 + 50));
+					regions[i]->population.push_back(new MedicalStaff(rand() % 100 + 1, 0, "Medical Staff", rand() % 20 + 50));
 					this->medicalStaffAmount++;
 				}
 			}
 			else {
-				regions[i]->population.push_back(new Citizen(rand() % 100 + 1, immune(), "Citizen", rand() % 20 + 50, rand() % 2));
+				regions[i]->population.push_back(new Citizen(rand() % 100 + 1, 0, "Citizen", rand() % 20 + 50, rand() % 2));
 				this->citizenAmount++;
 			}
 		}
 	}
+	immune();
 }
 int World::immune() {
 

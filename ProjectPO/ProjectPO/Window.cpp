@@ -131,37 +131,37 @@ void Window::openSimulation() {
 		world.displayRegions();
 		world.turnToZombie();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.purgeZombies();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.impairHumanity();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.transmitVirus();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.healInfected();
 
-		Sleep(2000);
+		//Sleep(2000);
 		system("cls");
 		world.displayRegions();
 		world.makeBaby();
