@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -160,6 +160,7 @@
     <ClCompile Include="RespiratoryVirus.cpp" />
     <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="Virus.cpp" />
+    <ClCompile Include="Window.cpp" />
     <ClCompile Include="World.cpp" />
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
@@ -172,6 +173,7 @@
     <ClInclude Include="RespiratoryVirus.h" />
     <ClInclude Include="Soldier.h" />
     <ClInclude Include="Virus.h" />
+    <ClInclude Include="Window.h" />
     <ClInclude Include="World.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
