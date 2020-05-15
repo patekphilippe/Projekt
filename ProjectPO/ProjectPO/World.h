@@ -41,6 +41,7 @@ public:
 	void impairHumanity();
 	void purgeZombies();
 	void healInfected();
+	int immune();
 	World ();
 	World(int deaths , int survivors, int infected);
 	void getDeaths();
