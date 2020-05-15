@@ -23,20 +23,56 @@ void World::setRegions() {
 			int randHuman = rand() % (regions[i]->getEconomics());
 			if (randHuman >= 15) {
 				if (rand() % 2) {
-					regions[i]->population.push_back(new Soldier(rand() % 100 + 1, rand() % 100 + 1, "Soldier", rand() % 50 + 50, rand () % 50));
+					regions[i]->population.push_back(new Soldier(rand() % 100 + 1, immune(), "Soldier", rand() % 50 + 50, rand () % 50));
 					this->soldierAmount++;
 				}
 				else {
-					regions[i]->population.push_back(new MedicalStaff(rand() % 100 + 1, rand() % 100 + 1, "Medical Staff", rand() % 20 + 50));
+					regions[i]->population.push_back(new MedicalStaff(rand() % 100 + 1, immune(), "Medical Staff", rand() % 20 + 50));
 					this->medicalStaffAmount++;
 				}
 			}
 			else {
-				regions[i]->population.push_back(new Citizen(rand() % 100 + 1, rand() % 50 + 1, "Citizen", rand() % 20 + 50, rand() % 2));
+				regions[i]->population.push_back(new Citizen(rand() % 100 + 1, immune(), "Citizen", rand() % 20 + 50, rand() % 2));
 				this->citizenAmount++;
 			}
 		}
 	}
+}
+int World::immune() {
+
+	for (int i = 0; i < regions.size(); i++) {
+		for (int y = 0; y < regions[i]->population.size(); y++) {
+			if (this->regions[i]->population[y]->getAge() < 10) {
+				this->regions[i]->population[y]->setImmune(100);
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 10 && this->regions[i]->population[y]->getAge() < 20) {
+				this->regions[i]->population[y]->setImmune(90);
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 20 && this->regions[i]->population[y]->getAge() < 30) {
+				this->regions[i]->population[y]->setImmune(80);
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 30 && this->regions[i]->population[y]->getAge() < 40) {
+				this->regions[i]->population[y]->setImmune(70);
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 40 && this->regions[i]->population[y]->getAge() < 50) {
+				this->regions[i]->population[y]->setImmune(60);
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 50 && this->regions[i]->population[y]->getAge() < 60) {
+				this->regions[i]->population[y]->setImmune(50);
+
+			}
+			else if (this->regions[i]->population[y]->getAge() >= 70 && this->regions[i]->population[y]->getAge() < 80) {
+				this->regions[i]->population[y]->setImmune(40);
+
+            }
+			else {
+				this->regions[i]->population[y]->setImmune(30);
+			}
+			
+		}
+		
+	}
+	return 0;
 }
 
 void World::setVirus() {
@@ -211,7 +247,7 @@ void World::healInfected() {
 							}
 							else if (regions[i]->population[z]->getInfectionName() == "Respiratory Virus") {
 								regions[i]->population[z]->setInfectionName("");
-								regions[i]->population[z]->setImmune(80 + rand() % 10);
+								regions[i]->population[z]->setImmune(80+rand()%10);
 								this->infectedAmount--;
 							}
 							regions[i]->population[z]->setisInfected(0);
@@ -224,6 +260,8 @@ void World::healInfected() {
 		}
 	}
 }
+
+
 void World::getDeaths()
 {
 }

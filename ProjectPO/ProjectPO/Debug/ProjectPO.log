@@ -1,3 +1,31 @@
+<<<<<<< HEAD
 ﻿  Window.cpp
 C:\Users\HP\Projekt\ProjectPO\ProjectPO\Window.cpp(112,12): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
   ProjectPO.vcxproj -> C:\Users\HP\Projekt\ProjectPO\Debug\ProjectPO.exe
+=======
+﻿  World.cpp
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(21,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(43,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(44,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(94,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(96,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(111,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(112,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(114,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(131,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(132,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(134,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(148,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(149,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(164,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(165,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(179,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(180,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(198,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(199,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(201,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(231,20): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(232,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Simulation\Projekt\ProjectPO\ProjectPO\World.cpp(234,23): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  ProjectPO.vcxproj -> C:\Simulation\Projekt\ProjectPO\Debug\ProjectPO.exe
+>>>>>>> 67fdfa28ec982618dbbc281494b2f94fb5788513
