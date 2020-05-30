@@ -6,7 +6,7 @@
 class Window
 {
 private:
-	string firstmenu[2];
+	string firstmenu[3];
 	string secondmenu[3];
 	int choosemenu;
 	int tabmenu[3];
@@ -20,7 +20,7 @@ public:
 	Window();
 	void displayMenu();
 	int setMenu();
-	void openSimulation();
+	void openSimulation(int);	
 	void closeSimulation();
 	void showStatistics();
 };

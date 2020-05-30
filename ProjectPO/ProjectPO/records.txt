@@ -1,0 +1,264 @@
+
+-----------------------------------------
+Month 1
+Citizen: 4
+Death:: 0
+Infected 1
+Medical Staff: 10
+Zombie: 0
+Soldier : 8
+
+-----------------------------------------
+
+-----------------------------------------
+Month 2
+Citizen: 4
+Death:: 0
+Infected 15
+Medical Staff: 10
+Zombie: 0
+Soldier : 8
+
+-----------------------------------------
+
+-----------------------------------------
+Month 3
+Citizen: 4
+Death:: 0
+Infected 20
+Medical Staff: 10
+Zombie: 0
+Soldier : 8
+
+-----------------------------------------
+
+-----------------------------------------
+Month 4
+Citizen: 4
+Death:: 1
+Infected 19
+Medical Staff: 10
+Zombie: 0
+Soldier : 7
+
+-----------------------------------------
+
+-----------------------------------------
+Month 5
+Citizen: 4
+Death:: 2
+Infected 18
+Medical Staff: 9
+Zombie: 0
+Soldier : 7
+
+-----------------------------------------
+
+-----------------------------------------
+Month 6
+Citizen: 4
+Death:: 4
+Infected 16
+Medical Staff: 7
+Zombie: 0
+Soldier : 7
+
+-----------------------------------------
+
+-----------------------------------------
+Month 7
+Citizen: 3
+Death:: 7
+Infected 13
+Medical Staff: 6
+Zombie: 0
+Soldier : 6
+
+-----------------------------------------
+
+-----------------------------------------
+Month 8
+Citizen: 3
+Death:: 9
+Infected 12
+Medical Staff: 4
+Zombie: 0
+Soldier : 6
+
+-----------------------------------------
+
+-----------------------------------------
+Month 9
+Citizen: 3
+Death:: 12
+Infected 9
+Medical Staff: 2
+Zombie: 0
+Soldier : 5
+
+-----------------------------------------
+
+-----------------------------------------
+Month 10
+Citizen: 1
+Death:: 14
+Infected 7
+Medical Staff: 2
+Zombie: 0
+Soldier : 5
+
+-----------------------------------------
+
+-----------------------------------------
+Month 11
+Citizen: 1
+Death:: 15
+Infected 7
+Medical Staff: 1
+Zombie: 0
+Soldier : 5
+
+-----------------------------------------
+
+-----------------------------------------
+Month 12
+Citizen: 1
+Death:: 16
+Infected 6
+Medical Staff: 1
+Zombie: 0
+Soldier : 4
+
+-----------------------------------------
+
+-----------------------------------------
+Month 1
+Citizen: 18
+Death:: 0
+Infected 1
+Medical Staff: 40
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 2
+Citizen: 19
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 3
+Citizen: 20
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 4
+Citizen: 23
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 5
+Citizen: 26
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 6
+Citizen: 30
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 7
+Citizen: 33
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 8
+Citizen: 38
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 9
+Citizen: 44
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 10
+Citizen: 50
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 11
+Citizen: 56
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------
+
+-----------------------------------------
+Month 12
+Citizen: 62
+Death:: 0
+Infected 0
+Medical Staff: 39
+Zombie: 0
+Soldier : 52
+
+-----------------------------------------

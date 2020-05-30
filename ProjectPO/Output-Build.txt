@@ -1,0 +1,28 @@
+﻿1>------ Build started: Project: ProjectPO, Configuration: Debug Win32 ------
+1>World.cpp
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(82,12): warning C4129: 'S': unrecognized character escape sequence
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(100,6): warning C4101: 'virusID': unreferenced local variable
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(124,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(126,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(141,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(142,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(144,23): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(161,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(162,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(164,23): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(176,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(177,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(192,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(193,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(207,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(208,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(226,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(227,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(229,23): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(259,20): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(260,21): warning C4018: '<': signed/unsigned mismatch
+1>C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(262,23): warning C4018: '<': signed/unsigned mismatch
+1>ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe
+1>Done building project "ProjectPO.vcxproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

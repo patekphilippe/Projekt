@@ -11,6 +11,8 @@
 #include <vector>
 #include <windows.h>
 #include <string.h>
+#include <fstream>
+
 using namespace std;
 
 #define ARROW_UP 72
@@ -18,9 +20,10 @@ using namespace std;
 #define ENTER 13
 
 Window::Window() {
-	this->firstmenu[0] = "Open Simulation";
-	this->firstmenu[1] = "Close Simulation";
-	this->secondmenu[0] = "Repeat Simulation";
+	this->firstmenu[0] = "Start random Simulation";
+	this->firstmenu[1] = "Start own Simulation";
+	this->firstmenu[2] = "Close Simulation";
+	this->secondmenu[0] = "Go back";
 	this->secondmenu[1] = "Show statistics";
 	this->secondmenu[2] = "Close Simulation";
 	this->tabmenu[0] = 1;
@@ -28,7 +31,7 @@ Window::Window() {
 	this->tabmenu[2] = 0;
 	this->choosemenu = 1;
 	this->menuposition = 0;
-	this->menusize = 1;
+	this->menusize = 2;
 	this->key = 0;
 	this->exit = 1;
 };
@@ -44,7 +47,6 @@ int Window::setMenu() {
 				this->menuposition--;
 				this->tabmenu[menuposition] = 1;
 				system("cls");
-
 				displayMenu();
 			}
 			break;
@@ -54,7 +56,6 @@ int Window::setMenu() {
 				this->menuposition++;
 				this->tabmenu[menuposition] = 1;
 				system("cls");
-				
 				displayMenu();
 			}
 			break;
@@ -63,14 +64,20 @@ int Window::setMenu() {
 			for(int i = 0; i < this->menusize; i++)
 				if (this->tabmenu[i] == 1) {
 					if (this->choosemenu == 1) {
-						if (this->firstmenu[i] == "Open Simulation")
-							openSimulation();
+						if (this->firstmenu[i] == "Start random Simulation")
+							openSimulation(-1);
+						else if (this->firstmenu[i] == "Start own Simulation") {
+							openSimulation(world.parametriseSimulation());
+						}
 						else if (this->firstmenu[i] == "Close Simulation")
 							this->exit = 0;
 					}
 					else {
-						if (this->secondmenu[i] == "Repeat Simulation")
-							openSimulation();
+						if (this->secondmenu[i] == "Go back") {
+							system("cls");
+							choosemenu = 1;
+							setMenu();
+						}
 						else if (this->secondmenu[i] == "Close Simulation")
 							this->exit = 0;
 
@@ -107,12 +114,19 @@ void Window::displayMenu() {
 		}
 }
 
-void Window::openSimulation() {
+void Window::openSimulation(int virusID) {
+	int timesim = 1200;
 	system("cls");
 	srand(time(NULL));
-	world.setRegions();
-	world.setVirus();
-	world.beginInfection();
+	this->world.setRegions(virusID);
+	this->world.setVirus();
+	this->world.beginInfection(virusID);
+
+	for (int i = 0; i < 12; i++) {
+		this->world.deathAmount = 0;
+		this->world.infectedAmount = 1;
+		this->world.zombiesAmount = 0;
+	}
 
 	for (int i = 0; i < 12; i++) {
 		world.citizenStatistic[i] = world.citizenAmount;
@@ -127,46 +141,72 @@ void Window::openSimulation() {
 		cout << "Soldiers: " << world.soldierAmount << endl;
 		cout << "Citizen: " << world.citizenAmount << endl;
 		cout << endl;
+
 		system("cls");
 		world.displayRegions();
 		world.turnToZombie();
 
-		Sleep(2000);
+		//Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.purgeZombies();
 
-		Sleep(2000);
+		//Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.impairHumanity();
 
-		Sleep(2000);
+		//Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		Sleep(2000);
+		//Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.transmitVirus();
 
-		Sleep(2000);
+	//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		Sleep(2000);
+	//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.healInfected();
 
-		Sleep(2000);
+	//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.makeBaby();
-		//cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n";
-
+	}
+	this->world.regions.clear();
+	this->world.citizenAmount = 0;
+	this->world.medicalStaffAmount = 0;
+	this->world.soldierAmount = 0;
+	system("cls");
+	cout << "Do you want to save records to the file? Y or N \n";
+	char ans = _getch();
+	if (ans == 'Y' || ans == 'y') {
+		ofstream records;
+		records.open("records.txt", ios_base::app);
+		if (records.is_open())
+		{
+			for (int i = 0; i < 12; i++) {
+				records << "\n-----------------------------------------\n";
+				records << "Month " << i + 1 << endl;
+				records << "Citizen: " << world.citizenStatistic[i] << endl;
+				records << "Death:: " << world.deathStatistic[i] << endl;
+				records << "Infected " << world.infectedStatistic[i] << endl;
+				records << "Medical Staff: " << world.medicalStaffStatistic[i] << endl;
+				records << "Zombie: " << world.zombieStatistic[i] << endl;
+				records << "Soldier : " << world.soldierStatistic[i] << endl;
+				records << "\n-----------------------------------------\n";
+			}
+			
+		}
+		records.close();
 	}
 	system("cls");
 	this->menusize = 2;
@@ -188,9 +228,15 @@ void Window::showStatistics() {
 		cout << "Zombie: " << world.zombieStatistic[i] << endl;
 		cout << "Soldier : " << world.soldierStatistic[i] << endl;
 		cout << "\n----------------------------------\n";
+		cout << "----------------PRESS X TO INTERRUPT---------------";
+		if (_kbhit()) {
+			char znak = _getch();
+			if (znak == 'x' || znak == 'X') break;
+		}
 		Sleep(1000);
 		system("cls");
 	}
+
 	system("cls");
 	setMenu();
 }

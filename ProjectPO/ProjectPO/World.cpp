@@ -1,4 +1,5 @@
 #include "World.h"
+
 World::World() {
 	this->deathAmount = 0;
 	this->citizenAmount = 0;
@@ -8,71 +9,39 @@ World::World() {
 	this->infectedAmount = 0;
 };
 
-void World::setRegions() {
-	regions.push_back(new Region("Africa", rand() % 20 + 1, rand() % 100 + 1));
-	regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
-	//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
+void World::setRegions(int isParametrised) {
+	if (isParametrised == -1) {
+		regions.push_back(new Region("Africa", rand() % 20 + 1, rand() % 100 + 1));
+		regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
+	//	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
+		//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
+		//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
+		//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
+		//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
+	}
 
-	//ZALUDNIANIE REGIONOW
 	for (int i = 0; i < this->regions.size(); i++) {
 		for (int y = 0; y < regions[i]->getPopulationAmount(); y++) {
 			int randHuman = rand() % (regions[i]->getEconomics());
 			if (randHuman >= 15) {
 				if (rand() % 2) {
-					regions[i]->population.push_back(new Soldier(rand() % 100 + 1, immune(), "Soldier", rand() % 50 + 50, rand () % 50));
+					this->regions[i]->population.push_back(new Soldier(rand() % 99 + 1, 1, "Soldier", rand() % 50 + 50, rand () % 50));
+					this->regions[i]->population[y]->setImmune(100 - this->regions[i]->population[y]->getAge());
 					this->soldierAmount++;
 				}
 				else {
-					regions[i]->population.push_back(new MedicalStaff(rand() % 100 + 1, immune(), "Medical Staff", rand() % 20 + 50));
+					this->regions[i]->population.push_back(new MedicalStaff(rand() % 99 + 1, 1, "Medical Staff", rand() % 20 + 50));
 					this->medicalStaffAmount++;
+					this->regions[i]->population[y]->setImmune(100 - this->regions[i]->population[y]->getAge());
 				}
 			}
 			else {
-				regions[i]->population.push_back(new Citizen(rand() % 100 + 1, immune(), "Citizen", rand() % 20 + 50, rand() % 2));
+				this->regions[i]->population.push_back(new Citizen(rand() % 99 + 1, 1, "Citizen", rand() % 20 + 50, rand() % 2));
+				this->regions[i]->population[y]->setImmune(100 - this->regions[i]->population[y]->getAge());
 				this->citizenAmount++;
 			}
 		}
 	}
-}
-int World::immune() {
-
-	for (int i = 0; i < regions.size(); i++) {
-		for (int y = 0; y < regions[i]->population.size(); y++) {
-			if (this->regions[i]->population[y]->getAge() < 10) {
-				this->regions[i]->population[y]->setImmune(100);
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 10 && this->regions[i]->population[y]->getAge() < 20) {
-				this->regions[i]->population[y]->setImmune(90);
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 20 && this->regions[i]->population[y]->getAge() < 30) {
-				this->regions[i]->population[y]->setImmune(80);
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 30 && this->regions[i]->population[y]->getAge() < 40) {
-				this->regions[i]->population[y]->setImmune(70);
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 40 && this->regions[i]->population[y]->getAge() < 50) {
-				this->regions[i]->population[y]->setImmune(60);
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 50 && this->regions[i]->population[y]->getAge() < 60) {
-				this->regions[i]->population[y]->setImmune(50);
-
-			}
-			else if (this->regions[i]->population[y]->getAge() >= 70 && this->regions[i]->population[y]->getAge() < 80) {
-				this->regions[i]->population[y]->setImmune(40);
-
-            }
-			else {
-				this->regions[i]->population[y]->setImmune(30);
-			}
-			
-		}
-		
-	}
-	return 0;
 }
 
 void World::setVirus() {
@@ -80,9 +49,83 @@ void World::setVirus() {
 	this->viruses.push_back(new NerveVirus("Nerve Virus", 0, 1));
 	this->viruses.push_back(new RespiratoryVirus("Respiratory Virus", 0, 1));
 }
+int World::parametriseSimulation() {
+	bool loop = true;
+	system("cls");
+	//Sleep(5000);
+	while (loop) {
+		system("cls");
+		cout << "Welcome to simulation parametrisation system. Please insert desired values"
+			<< "\nKeep in mind that you can choose between 1-100 integral number.\n\n";
+		char decision;
+		string regionName;
+		string sPopulationAmount;
+		string sProsperityLevel;
+		int populationAmount = 0;
+		int prosperityLevel = 0;
+		cout << "Insert region name: ";
+		cin >> regionName;
+		while (populationAmount < 1 || populationAmount > 100)
+		{
+			cout << "Insert its population amount ";
+			cin >> sPopulationAmount;
+			try {
+				populationAmount = stoi(sPopulationAmount);
+			}
+			catch (invalid_argument const& e) {
+				cout << "Wrong value!\n";
+			}
+		}
 
-void World::beginInfection() {
-	int pickVirus = rand() % 3;
+		while (prosperityLevel < 1 || prosperityLevel > 100)
+		{
+			cout << "Insert its prosperity level ";
+			cin >> sProsperityLevel;
+			try {
+				prosperityLevel = stoi(sProsperityLevel);
+			}
+			catch (invalid_argument const& e) {
+				cout << "Wrong value!\n";
+			}
+		}
+		cout << endl;
+		regions.push_back(new Region(regionName, populationAmount, prosperityLevel));
+		while (1) {
+			cout << "Thank you for your cooperation. Do you want keep adding regions? Y or N ";
+			cin >> decision;
+			if (decision == 'Y' || decision == 'y') {
+				break;
+			}
+			else if (decision == 'N' || decision == 'n') {
+				cout << "\n";
+				loop = false; 
+				break;
+			}
+			else {
+				system("cls");
+				cout << "I dont understand. \n";
+			}
+		}
+	}
+	cout << "Regions are set.\n";
+	cout << "Please write starting Virus: Respiratory, Reproductive, Nerve: ";
+	string virusName;
+	int virusID;
+	while (virusName != "Reproductive" && virusName != "Respiratory" && virusName != "Nerve") {
+		cin >> virusName;
+		if (virusName == "Reproductive") return 0;
+		else if (virusName == "Nerve") return 1;
+		else if (virusName == "Respiratory") return 2;
+		else cout << "I dont understand.\n" << virusName;
+	}
+	cout << "Thank you for your cooperation. Beginning simulation...";
+	Sleep(1000);
+	return 0;
+}
+void World::beginInfection(int virusID) {
+	int pickVirus;
+	if (virusID == 0 || virusID == 1 || virusID == 2) pickVirus = virusID;
+	else pickVirus = rand() % 3;
 	int pickRegion = rand() % (this->regions.size());
 	int pickHuman = rand() % (this->regions[pickRegion]->population.size());
 	this->regions[pickRegion]->population[pickHuman]->affect(viruses[pickVirus]);
@@ -135,8 +178,6 @@ void World::transmitVirus() {
 					if (y != z && !this->regions[i]->population[z]->getIsInfected()) {
 						this->regions[i]->population[z]->affect(this->viruses[this->regions[i]->population[y]->getVirusId()]);
 						this->infectedAmount++;
-						//z++;
-						//break;
 					}
 				}
 			}
@@ -235,7 +276,6 @@ void World::healInfected() {
 					if (y != z && regions[i]->population[z]->getIsInfected() && regions[i]->population[z]->getName() != "Zombie") {
 						int healAmount = rand() % regions[i]->population[z]->getImmune() - this->viruses[this->regions[i]->population[z]->getVirusId()]->getMutation();
 						if(healAmount > 0) this->regions[i]->population[z]->bandageWounds(healAmount);
-						//if (rand() % 2) {
 							if (regions[i]->population[z]->getInfectionName() == "Nerve Virus") {
 								regions[i]->population[z]->setInfectionName("");
 								this->infectedAmount--;
@@ -251,7 +291,6 @@ void World::healInfected() {
 								this->infectedAmount--;
 							}
 							regions[i]->population[z]->setisInfected(0);
-						//}
 					}
 					y++;
 					break;

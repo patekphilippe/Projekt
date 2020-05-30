@@ -11,6 +11,5 @@ Soldier::Soldier(int age, int immune, string profession, int health, int damage)
 }
 
 int Soldier::ability() {
-	cout << "dealing damage";
 	return -(rand() % 10);
 }

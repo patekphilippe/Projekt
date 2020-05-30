@@ -95,4 +95,5 @@ void Citizen::affect(Virus* virus) {
 
 void Citizen::bandageWounds(int health) {
 	this->health += health;
+	if (this->health > 100) this->health = 100;
 }

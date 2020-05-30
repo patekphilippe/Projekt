@@ -9,6 +9,5 @@ MedicalStaff::MedicalStaff(int age, int immune, string profession, int health) {
 	this->fertile = 0;
 }
 int MedicalStaff::ability() {
-	cout << "healing";
 	return rand() % 10;
 }
