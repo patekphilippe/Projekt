@@ -61,7 +61,7 @@ int Window::setMenu() {
 			break;
 
 		case ENTER:
-			for(int i = 0; i < this->menusize; i++)
+			for (int i = 0; i < this->menusize; i++)
 				if (this->tabmenu[i] == 1) {
 					if (this->choosemenu == 1) {
 						if (this->firstmenu[i] == "Start random Simulation")
@@ -96,7 +96,7 @@ int Window::setMenu() {
 }
 
 void Window::displayMenu() {
-	if(this->choosemenu == 1)
+	if (this->choosemenu == 1)
 		for (int i = 0; i <= this->menusize; i++)
 		{
 			cout << this->firstmenu[i];
@@ -166,17 +166,17 @@ void Window::openSimulation(int virusID) {
 		world.displayRegions();
 		world.transmitVirus();
 
-	//	Sleep(timesim);
+		//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-	//	Sleep(timesim);
+		//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.healInfected();
 
-	//	Sleep(timesim);
+		//	Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.makeBaby();
@@ -204,7 +204,7 @@ void Window::openSimulation(int virusID) {
 				records << "Soldier : " << world.soldierStatistic[i] << endl;
 				records << "\n-----------------------------------------\n";
 			}
-			
+
 		}
 		records.close();
 	}

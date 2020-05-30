@@ -13,11 +13,11 @@ void World::setRegions(int isParametrised) {
 	if (isParametrised == -1) {
 		regions.push_back(new Region("Africa", rand() % 20 + 1, rand() % 100 + 1));
 		regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
-	//	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
-		//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
-		//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
-		//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
-		//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
+		//	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
+			//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
+			//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
+			//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));
+			//regions.push_back(new Region("Antarctica", rand() % 100 + 1, rand() % 100 + 1));
 	}
 
 	for (int i = 0; i < this->regions.size(); i++) {
@@ -25,7 +25,7 @@ void World::setRegions(int isParametrised) {
 			int randHuman = rand() % (regions[i]->getEconomics());
 			if (randHuman >= 15) {
 				if (rand() % 2) {
-					this->regions[i]->population.push_back(new Soldier(rand() % 99 + 1, 1, "Soldier", rand() % 50 + 50, rand () % 50));
+					this->regions[i]->population.push_back(new Soldier(rand() % 99 + 1, 1, "Soldier", rand() % 50 + 50, rand() % 50));
 					this->regions[i]->population[y]->setImmune(100 - this->regions[i]->population[y]->getAge());
 					this->soldierAmount++;
 				}
@@ -98,7 +98,7 @@ int World::parametriseSimulation() {
 			}
 			else if (decision == 'N' || decision == 'n') {
 				cout << "\n";
-				loop = false; 
+				loop = false;
 				break;
 			}
 			else {
@@ -188,15 +188,15 @@ void World::transmitVirus() {
 void World::travel() {
 	for (int i = 0; i < this->regions.size(); i++) {
 		for (int y = 0; y < this->regions[i]->population.size(); y++) {
-			if(this->regions[i]->population[y]->getName() == "Citizen" || this->regions[i]->population[y]->getName() == "Zombie")
-			if (this->regions[i]->getEconomics() >= 10) {
-				if (rand() % 2) {
-					this->regions[rand() % this->regions.size()]->population.push_back(this->regions[i]->population[y]);
-					this->regions[i]->population.erase(this->regions[i]->population.begin() + y);
-					y++;
-					break;
+			if (this->regions[i]->population[y]->getName() == "Citizen" || this->regions[i]->population[y]->getName() == "Zombie")
+				if (this->regions[i]->getEconomics() >= 10) {
+					if (rand() % 2) {
+						this->regions[rand() % this->regions.size()]->population.push_back(this->regions[i]->population[y]);
+						this->regions[i]->population.erase(this->regions[i]->population.begin() + y);
+						y++;
+						break;
+					}
 				}
-			}
 		}
 	}
 }
@@ -209,7 +209,7 @@ void World::turnToZombie() {
 				else if (this->regions[i]->population[y]->getName() == "Soldier") this->soldierAmount--;
 				else if (this->regions[i]->population[y]->getName() == "Citizen") this->citizenAmount--;
 				this->regions[i]->population.erase(this->regions[i]->population.begin() + y);
-				this->regions[i]->population.push_back(new Zombie(rand() % 100, "Zombie", rand () % 10));
+				this->regions[i]->population.push_back(new Zombie(rand() % 100, "Zombie", rand() % 10));
 				this->zombiesAmount++;
 			}
 		}
@@ -225,7 +225,7 @@ void World::impairHumanity() {
 				if (this->regions[i]->population[y]->getHealth() < 0) {
 					if (this->regions[i]->population[y]->getName() == "Medical Staff") this->medicalStaffAmount--;
 					else if (this->regions[i]->population[y]->getName() == "Soldier") this->soldierAmount--;
-					else if(this->regions[i]->population[y]->getName() == "Citizen") this->citizenAmount--;
+					else if (this->regions[i]->population[y]->getName() == "Citizen") this->citizenAmount--;
 					this->regions[i]->population.erase(this->regions[i]->population.begin() + y);
 					this->infectedAmount--;
 					this->deathAmount++;
@@ -259,7 +259,7 @@ void World::purgeZombies() {
 								this->infectedAmount--;
 								break;
 							}
-					}
+						}
 
 					}
 				}
@@ -275,22 +275,22 @@ void World::healInfected() {
 				for (int z = 0; z < regions[i]->population.size(); z++) {
 					if (y != z && regions[i]->population[z]->getIsInfected() && regions[i]->population[z]->getName() != "Zombie") {
 						int healAmount = rand() % regions[i]->population[z]->getImmune() - this->viruses[this->regions[i]->population[z]->getVirusId()]->getMutation();
-						if(healAmount > 0) this->regions[i]->population[z]->bandageWounds(healAmount);
-							if (regions[i]->population[z]->getInfectionName() == "Nerve Virus") {
-								regions[i]->population[z]->setInfectionName("");
-								this->infectedAmount--;
-							}
-							else if (regions[i]->population[z]->getInfectionName() == "Reproductive Virus") {
-								regions[i]->population[z]->setInfectionName("");
-								regions[i]->population[z]->setFertile(1);
-								this->infectedAmount--;
-							}
-							else if (regions[i]->population[z]->getInfectionName() == "Respiratory Virus") {
-								regions[i]->population[z]->setInfectionName("");
-								regions[i]->population[z]->setImmune(80+rand()%10);
-								this->infectedAmount--;
-							}
-							regions[i]->population[z]->setisInfected(0);
+						if (healAmount > 0) this->regions[i]->population[z]->bandageWounds(healAmount);
+						if (regions[i]->population[z]->getInfectionName() == "Nerve Virus") {
+							regions[i]->population[z]->setInfectionName("");
+							this->infectedAmount--;
+						}
+						else if (regions[i]->population[z]->getInfectionName() == "Reproductive Virus") {
+							regions[i]->population[z]->setInfectionName("");
+							regions[i]->population[z]->setFertile(1);
+							this->infectedAmount--;
+						}
+						else if (regions[i]->population[z]->getInfectionName() == "Respiratory Virus") {
+							regions[i]->population[z]->setInfectionName("");
+							regions[i]->population[z]->setImmune(80 + rand() % 10);
+							this->infectedAmount--;
+						}
+						regions[i]->population[z]->setisInfected(0);
 					}
 					y++;
 					break;
@@ -313,9 +313,9 @@ void World::getInfected()
 {
 }
 
-void World::makeDiagram(int populaton , int deaths, int active_cases)
+void World::makeDiagram(int populaton, int deaths, int active_cases)
 {
-	
+
 }
 
 World::~World()

@@ -1,8 +1,4 @@
-﻿  MedicalStaff.cpp
-  ProjectPO.cpp
-  Region.cpp
-  Soldier.cpp
-  Window.cpp
+﻿  Window.cpp
 C:\kwak\Projekt\ProjectPO\ProjectPO\Window.cpp(120,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   World.cpp
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
@@ -29,7 +25,6 @@ C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(242,23): warning C4018: '<': signe
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(272,20): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(273,21): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(275,23): warning C4018: '<': signed/unsigned mismatch
-  Zombie.cpp
   Generating Code...
   LINK : C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe not found or not built by the last incremental link; performing full link
   ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe
