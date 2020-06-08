@@ -1,30 +1,23 @@
-﻿  Window.cpp
-C:\kwak\Projekt\ProjectPO\ProjectPO\Window.cpp(120,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  World.cpp
+﻿  World.cpp
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(113,6): warning C4101: 'virusID': unreferenced local variable
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(75,35): warning C4101: 'e': unreferenced local variable
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(87,35): warning C4101: 'e': unreferenced local variable
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(137,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(139,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(154,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(155,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(157,23): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(174,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(175,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(177,23): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(189,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(190,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(205,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(206,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(220,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(221,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(239,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(240,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(242,23): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(272,20): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(273,21): warning C4018: '<': signed/unsigned mismatch
-C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(275,23): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  LINK : C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe not found or not built by the last incremental link; performing full link
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(176,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(191,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(192,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(194,23): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(211,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(212,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(214,23): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(226,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(227,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(242,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(243,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(257,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(258,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(276,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(277,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(279,23): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(309,20): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(310,21): warning C4018: '<': signed/unsigned mismatch
+C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(312,23): warning C4018: '<': signed/unsigned mismatch
   ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe

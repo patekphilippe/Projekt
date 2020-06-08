@@ -11,4 +11,5 @@ int NerveVirus::ability() {
 	int turnToZombie = rand() % 2;
 	return turnToZombie;
 }
-NerveVirus::~NerveVirus(){}
+
+NerveVirus::~NerveVirus() {};

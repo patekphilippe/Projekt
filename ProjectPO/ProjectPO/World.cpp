@@ -45,54 +45,90 @@ void World::setRegions(int isParametrised) {
 }
 
 void World::setVirus() {
-	this->viruses.push_back(new ReproductiveVirus("Reproductive Virus", 0, 1));
+	this->viruses.push_back(new ReproductiveVirus("Reproductive Virus", 0, rand() % 20 + 1));
 	this->viruses.push_back(new NerveVirus("Nerve Virus", 0, 1));
-	this->viruses.push_back(new RespiratoryVirus("Respiratory Virus", 0, 1));
+	this->viruses.push_back(new RespiratoryVirus("Respiratory Virus", 0, rand() % 20 + 1));
 }
+
 int World::parametriseSimulation() {
 	bool loop = true;
+	bool loop1 = true;
+	bool loop2 = true;
 	system("cls");
 	//Sleep(5000);
 	while (loop) {
-		system("cls");
-		cout << "Welcome to simulation parametrisation system. Please insert desired values"
-			<< "\nKeep in mind that you can choose between 1-100 integral number.\n\n";
 		char decision;
 		string regionName;
 		string sPopulationAmount;
 		string sProsperityLevel;
 		int populationAmount = 0;
 		int prosperityLevel = 0;
-		cout << "Insert region name: ";
+		system("cls");
+		cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+			 <<"ENTER to apply.\n";
+		cout << "--------------------------------------------.\n";
+		cout << "Region name: ";
 		cin >> regionName;
-		while (populationAmount < 1 || populationAmount > 100)
+		while (loop1)
 		{
-			cout << "Insert its population amount ";
-			cin >> sPopulationAmount;
-			try {
-				populationAmount = stoi(sPopulationAmount);
+			system("cls");
+			cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+				<< "ENTER to apply.\n";
+			cout << "--------------------------------------------.\n";
+			cout << "Population amount " << populationAmount << "/" << "100";
+			switch ((decision = _getch())) {
+			case 72:
+				if (populationAmount <= 90) {
+					populationAmount += 10;
+				}
+				break;
+			case 80:
+				if (populationAmount >= 10) {
+					populationAmount -= 10;
+				}
+				break;
+			case 13:
+				loop1 = false;
+				break;
+			default:
+				break;
 			}
-			catch (invalid_argument const& e) {
-				cout << "Wrong value!\n";
-			}
+			system("cls");
 		}
 
-		while (prosperityLevel < 1 || prosperityLevel > 100)
+		while (loop2)
 		{
-			cout << "Insert its prosperity level ";
-			cin >> sProsperityLevel;
-			try {
-				prosperityLevel = stoi(sProsperityLevel);
-			}
-			catch (invalid_argument const& e) {
-				cout << "Wrong value!\n";
-			}
+			system("cls");
+			cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+				<< "ENTER to apply.\n";
+			cout << "--------------------------------------------.\n";
+			cout << "Prosperity level " << prosperityLevel << "/" << "100";
+				switch ((decision = _getch())) {
+				case 72:
+					if (prosperityLevel <= 90) {
+						prosperityLevel += 10;
+					}
+					break;
+				case 80:
+					if (prosperityLevel >= 10) {
+						prosperityLevel -= 10;
+					}
+					break;
+				case 13:
+					loop2 = false;
+					break;
+				default:
+					break;
+				}
+			system("cls");
 		}
 		cout << endl;
 		regions.push_back(new Region(regionName, populationAmount, prosperityLevel));
 		while (1) {
+			loop1 = true;
+			loop2 = true;
 			cout << "Thank you for your cooperation. Do you want keep adding regions? Y or N ";
-			cin >> decision;
+			decision = _getch();
 			if (decision == 'Y' || decision == 'y') {
 				break;
 			}
@@ -104,13 +140,14 @@ int World::parametriseSimulation() {
 			else {
 				system("cls");
 				cout << "I dont understand. \n";
+				system("cls");
 			}
 		}
 	}
 	cout << "Regions are set.\n";
 	cout << "Please write starting Virus: Respiratory, Reproductive, Nerve: ";
 	string virusName;
-	int virusID;
+	
 	while (virusName != "Reproductive" && virusName != "Respiratory" && virusName != "Nerve") {
 		cin >> virusName;
 		if (virusName == "Reproductive") return 0;
@@ -122,6 +159,7 @@ int World::parametriseSimulation() {
 	Sleep(1000);
 	return 0;
 }
+
 void World::beginInfection(int virusID) {
 	int pickVirus;
 	if (virusID == 0 || virusID == 1 || virusID == 2) pickVirus = virusID;
@@ -131,7 +169,6 @@ void World::beginInfection(int virusID) {
 	this->regions[pickRegion]->population[pickHuman]->affect(viruses[pickVirus]);
 	this->infectedAmount++;
 }
-
 
 void World::displayRegions() {
 	for (int i = 0; i < this->regions.size(); i++) {
@@ -298,24 +335,6 @@ void World::healInfected() {
 			}
 		}
 	}
-}
-
-
-void World::getDeaths()
-{
-}
-
-void World::getSurvivors()
-{
-}
-
-void World::getInfected()
-{
-}
-
-void World::makeDiagram(int populaton, int deaths, int active_cases)
-{
-
 }
 
 World::~World()

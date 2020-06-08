@@ -71,6 +71,7 @@ void Citizen::impairHealth(int health) {
 	this->health -= health;
 }
 void Citizen::affect(Virus* virus) {
+	
 	if (virus->getVirusName() == "Nerve Virus") {
 		this->infectionName = virus->getVirusName();
 		this->isInfected = 1;

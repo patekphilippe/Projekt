@@ -2,7 +2,9 @@
 #include "World.h"
 #include <iostream>
 
-
+/// <summary>
+/// gówno kurwa
+/// </summary>
 class Window
 {
 private:

@@ -11,6 +11,3 @@ Zombie::Zombie(int health, string profession, int damage) {
 	this->fertile = 0;
 }
 
-int Zombie::ability() {
-	return 0;
-}

@@ -186,7 +186,7 @@ void Window::openSimulation(int virusID) {
 	this->world.medicalStaffAmount = 0;
 	this->world.soldierAmount = 0;
 	system("cls");
-	cout << "Do you want to save records to the file? Y or N \n";
+	cout << "Do you want to save records to the file? Press Y for YES, other button for NOT. \n";
 	char ans = _getch();
 	if (ans == 'Y' || ans == 'y') {
 		ofstream records;

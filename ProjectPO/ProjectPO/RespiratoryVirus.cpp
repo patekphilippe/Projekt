@@ -12,13 +12,4 @@ int RespiratoryVirus::ability() {
 	return -lowerImmune;
 }
 
-bool RespiratoryVirus::kill() {
-	int n = rand() % 10;
-	if (n <= 6) {
-		return 0;
-	}
-	else
-		return this->death;
-}
-
 RespiratoryVirus::~RespiratoryVirus(){}

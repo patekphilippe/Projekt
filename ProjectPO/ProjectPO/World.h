@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <time.h>
 #include <vector>
-
+#include <conio.h>
 class World
 {
 public:
@@ -43,10 +43,6 @@ public:
 	void impairHumanity();
 	void purgeZombies();
 	void healInfected();
-	void getDeaths();
-	void getSurvivors();
-	void getInfected();
-	void makeDiagram(int populaton, int deaths, int active_cases);
 	void setVirus();
 	int parametriseSimulation();
 	World ();
