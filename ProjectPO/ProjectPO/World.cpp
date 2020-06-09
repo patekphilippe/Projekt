@@ -1,5 +1,5 @@
 #include "World.h"
-
+using namespace std;
 World::World() {
 	this->deathAmount = 0;
 	this->citizenAmount = 0;
@@ -51,18 +51,19 @@ void World::setVirus() {
 }
 
 int World::parametriseSimulation() {
+	int regionAmount = 0;
 	bool loop = true;
 	bool loop1 = true;
 	bool loop2 = true;
 	system("cls");
 	//Sleep(5000);
-	while (loop) {
+	while (loop) {	
 		char decision;
 		string regionName;
 		string sPopulationAmount;
 		string sProsperityLevel;
-		int populationAmount = 0;
-		int prosperityLevel = 0;
+		int populationAmount = 10;
+		int prosperityLevel = 10;
 		system("cls");
 		cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
 			 <<"ENTER to apply.\n";
@@ -83,7 +84,7 @@ int World::parametriseSimulation() {
 				}
 				break;
 			case 80:
-				if (populationAmount >= 10) {
+				if (populationAmount >= 20) {
 					populationAmount -= 10;
 				}
 				break;
@@ -110,7 +111,7 @@ int World::parametriseSimulation() {
 					}
 					break;
 				case 80:
-					if (prosperityLevel >= 10) {
+					if (prosperityLevel >= 20) {
 						prosperityLevel -= 10;
 					}
 					break;
@@ -124,16 +125,25 @@ int World::parametriseSimulation() {
 		}
 		cout << endl;
 		regions.push_back(new Region(regionName, populationAmount, prosperityLevel));
+		regionAmount++;
 		while (1) {
 			loop1 = true;
 			loop2 = true;
-			cout << "Thank you for your cooperation. Do you want keep adding regions? Y or N ";
+			cout << "Thank you for your cooperation. Do you want keep adding regions? (maximum is 7) Y or N \n";
+			cout << "Region Amount: " << regionAmount << endl; 
 			decision = _getch();
-			if (decision == 'Y' || decision == 'y') {
+			if (decision == 'Y' || decision == 'y' && regionAmount < 7) {
 				break;
 			}
 			else if (decision == 'N' || decision == 'n') {
 				cout << "\n";
+				loop = false;
+				break;
+			}
+			else if (regionAmount == 7)
+			{
+				cout << "Cant add more regions. Press random button to begin simulation" << endl;
+				decision = _getch();
 				loop = false;
 				break;
 			}
@@ -335,9 +345,4 @@ void World::healInfected() {
 			}
 		}
 	}
-}
-
-World::~World()
-{
-
 }

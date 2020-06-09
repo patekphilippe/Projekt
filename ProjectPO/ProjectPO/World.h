@@ -8,12 +8,11 @@
 #include "RespiratoryVirus.h"
 #include "NerveVirus.h"
 #include "ReproductiveVirus.h"
-#include <windows.h>
 #include <iostream>
-#include <cstdlib>
-#include <time.h>
+#include <string>
+#include <ctime>
 #include <vector>
-#include <conio.h>
+
 class World
 {
 public:
@@ -30,9 +29,9 @@ public:
 	int soldierAmount;
 	int zombiesAmount;
 	int infectedAmount;
-	vector<Virus* > viruses;
-	vector<Region* > regions;
-	vector<Citizen* > population;
+	std::vector<Virus* > viruses;
+	std::vector<Region* > regions;
+	std::vector<Citizen* > population;
 	void makeBaby();
 	void setRegions(int);
 	void displayRegions();
@@ -45,8 +44,6 @@ public:
 	void healInfected();
 	void setVirus();
 	int parametriseSimulation();
-	World ();
-	World(int deaths , int survivors, int infected);
-	~World();
+	World();
 };
 

@@ -1,5 +1,5 @@
 #include "MedicalStaff.h"
-MedicalStaff::MedicalStaff() {};
+using namespace std;
 MedicalStaff::MedicalStaff(int age, int immune, string profession, int health) {
 	this->age = age;
 	this->immune = immune;

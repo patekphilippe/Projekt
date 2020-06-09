@@ -1,15 +1,15 @@
 #pragma once
 #include "World.h"
-#include <iostream>
+#include <fstream>
 
-/// <summary>
-/// gówno kurwa
-/// </summary>
+///This class allows user to open, repeat or parametrise simulation.
+///  
+///After every simulation user can save data to txt file.
 class Window
 {
 private:
-	string firstmenu[3];
-	string secondmenu[3];
+	std::string firstmenu[3];
+	std::string secondmenu[3];
 	int choosemenu;
 	int tabmenu[3];
 	int menuposition;
@@ -23,7 +23,7 @@ public:
 	void displayMenu();
 	int setMenu();
 	void openSimulation(int);	
-	void closeSimulation();
+	///Shows monthly statistics
 	void showStatistics();
 };
 

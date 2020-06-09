@@ -1,4 +1,5 @@
 #include "Zombie.h"
+using namespace std;
 Zombie::Zombie() {};
 Zombie::Zombie(int health, string profession, int damage) {
 	this->damage = damage;

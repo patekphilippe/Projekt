@@ -1,7 +1,6 @@
 #include "Citizen.h"
-
-Citizen::Citizen(){}
-
+using namespace std;
+Citizen::Citizen() {};
 Citizen::Citizen(int age, int immune, string profession, int health, bool fertile) {
 	this->age = age;
 	this->immune = immune;

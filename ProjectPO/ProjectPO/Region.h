@@ -1,31 +1,24 @@
 #pragma once
-#include<string>
-#include<vector>
 #include"Citizen.h"
 
-using namespace std;
-
+///This class represents single region which contains population.
+/// 
+///Every region has its own economy. Economy determines amount
+///of medical staff and soldier in this region. 
+///Moreover increases the chance of travelling human to another country.
 class Region
 {
-	string climate;
 	int economics;
-	string season;
-	string nameOfRegion;
+	std::string nameOfRegion;
 	int population_amount;
 
 public:
-	
-	Region(string, int, int);
-	Region();
-	
-	void update();
-	
-	vector<Citizen*> population;
-	string getClimate();
+	Region(std::string, int, int);
+	///Every element of this vector stores reference to single inhabitant of region.
+	std::vector<Citizen*> population;
 	int getEconomics();
-	string getSeason();
 	int getPopulationAmount();
-	string getNameOfRegion();
+	std::string getNameOfRegion();
 	
 };
 

@@ -1,10 +1,12 @@
 #pragma once
-#include <cstdlib>
-#include <time.h>
-#include <string>
+#include <windows.h>
 #include <iostream>
+#include <string>
+#include <time.h>
+#include <vector>
+#include <conio.h>
 #include "Virus.h"
-using namespace std;
+
 /// This is base class, from which Zombie, Soldier, Medical Staff inherits.
 /// Object of this class represents common human being. It can travel,
 /// give birth to a children, and transmit virus with a certain chance.
@@ -20,17 +22,16 @@ protected:
 	int immune;
 	bool isInfected;
 	bool fertile;
-	string profession;
-	string infectionName;
+	std::string profession;
+	std::string infectionName;
 public:
 	Citizen();
-	Citizen(int age, int immune, string profession, int health, bool fertile);
-
+	Citizen(int age, int immune, std::string profession, int health, bool fertile);
 	int getAge(); 
 	int getHealth();
-	string getName();
+	std::string getName();
 	/// returns name of the infection he is currently infected
-	string getInfectionName();
+	std::string getInfectionName();
 	int getImmune();
 	/// returns ID of virus which can be used to identify numerically his infection.
 	/// 0 stands for reproductive, 1 for Nerve, and 2 for Respiratory.
@@ -40,7 +41,7 @@ public:
 	void setisInfected(bool);
 	void setFertile(bool);
 	void setImmune(int);
-	void setInfectionName(string);
+	void setInfectionName(std::string);
 	/// Function which substracts specified amount of health from the object.
 	/// 
 	/// <param name="health"></param> Determines amount of substracted health.

@@ -1,20 +1,5 @@
 #include "Window.h"
-#include "Citizen.h"
-#include "Soldier.h"
-#include "MedicalStaff.h"
-#include "Zombie.h"
-#include "World.h"
-#include <iostream>
-#include <conio.h>
-#include <cstdlib>
-#include <time.h>
-#include <vector>
-#include <windows.h>
-#include <string.h>
-#include <fstream>
-
 using namespace std;
-
 #define ARROW_UP 72
 #define ARROW_DOWN 80
 #define ENTER 13
@@ -115,13 +100,28 @@ void Window::displayMenu() {
 }
 
 void Window::openSimulation(int virusID) {
-	int timesim = 1200;
+	char decision;
+	int timesim = 1000;
 	system("cls");
 	srand(time(NULL));
 	this->world.setRegions(virusID);
 	this->world.setVirus();
 	this->world.beginInfection(virusID);
-
+	
+	std::cout << "Hello. Choose desired time (ms) between events. \n[1] 10 \n[2] 100 \n[3] 1000 \n[4] 5000 \n[default] 1\n";
+	switch (decision = _getch()) {
+	case '1' : timesim = 10;
+		break;
+	case '2' : timesim = 1000;
+		break;
+	case '3' : timesim = 2000;
+		break;
+	case '4': timesim = 5000;
+		break;
+	default: timesim = 1;
+		break;
+	}
+	system("cls");
 	for (int i = 0; i < 12; i++) {
 		this->world.deathAmount = 0;
 		this->world.infectedAmount = 1;
@@ -141,42 +141,42 @@ void Window::openSimulation(int virusID) {
 		cout << "Soldiers: " << world.soldierAmount << endl;
 		cout << "Citizen: " << world.citizenAmount << endl;
 		cout << endl;
-
-		system("cls");
+		cout << "Sdsasd";
+		cout << "dsad";
 		world.displayRegions();
 		world.turnToZombie();
 
-		//Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.purgeZombies();
 
-		//Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.impairHumanity();
 
-		//Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		//Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.transmitVirus();
 
-		//	Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.travel();
 
-		//	Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.healInfected();
 
-		//	Sleep(timesim);
+		Sleep(timesim);
 		system("cls");
 		world.displayRegions();
 		world.makeBaby();

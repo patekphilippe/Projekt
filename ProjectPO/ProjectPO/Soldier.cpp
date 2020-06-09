@@ -1,5 +1,5 @@
 #include "Soldier.h"
-Soldier::Soldier() {};
+using namespace std;
 Soldier::Soldier(int age, int immune, string profession, int health, int damage) {
 	this->damage = damage;
 	this->age = age;
