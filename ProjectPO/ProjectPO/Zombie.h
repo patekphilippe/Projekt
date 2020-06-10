@@ -9,6 +9,7 @@ class Zombie :
 {
 public:
 	Zombie();
+	/// Constructor which initializes object parameters.
 	Zombie(int health, std::string profession, int damage);
 };
 

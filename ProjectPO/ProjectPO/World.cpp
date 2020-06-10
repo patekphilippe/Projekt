@@ -13,7 +13,7 @@ void World::setRegions(int isParametrised) {
 	if (isParametrised == -1) {
 		regions.push_back(new Region("Africa", rand() % 20 + 1, rand() % 100 + 1));
 		regions.push_back(new Region("North America", rand() % 20 + 1, rand() % 100 + 1));
-		//	regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
+		//regions.push_back(new Region("South Africa", rand() % 100 + 1, rand() % 100 + 1));
 			//regions.push_back(new Region("Asia", rand() % 100 + 1, rand() % 100 + 1));
 			//regions.push_back(new Region("Europe", rand() % 100 + 1, rand() % 100 + 1));
 			//regions.push_back(new Region("Australia", rand() % 100 + 1, rand() % 100 + 1));

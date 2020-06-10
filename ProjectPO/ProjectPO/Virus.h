@@ -24,6 +24,7 @@ protected:
 	bool iscurable;
 public:
 	Virus();
+	/// Constructor which initializes object parameters.
 	Virus(std::string, bool, int);
 	int getMutation();
 	std::string getVirusName();

@@ -16,9 +16,12 @@ class Citizen
 {
 protected:
 	int damage;
+	///numerical identificator of infection object suffers.
 	int virusID;
+	///the older object is the less resistance it has
 	int age;
 	int health;
+	///influences amount of healing he receives
 	int immune;
 	bool isInfected;
 	bool fertile;
