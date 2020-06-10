@@ -163,7 +163,7 @@ int World::parametriseSimulation() {
 		if (virusName == "Reproductive") return 0;
 		else if (virusName == "Nerve") return 1;
 		else if (virusName == "Respiratory") return 2;
-		else cout << "I dont understand.\n" << virusName;
+		else cout << "I dont understand.\n";
 	}
 	cout << "Thank you for your cooperation. Beginning simulation...";
 	Sleep(1000);

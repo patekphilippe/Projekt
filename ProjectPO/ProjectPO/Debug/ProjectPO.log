@@ -1,15 +1,4 @@
-﻿  Citizen.cpp
-  MedicalStaff.cpp
-  NerveVirus.cpp
-  ProjectPO.cpp
-  Region.cpp
-  ReproductiveVirus.cpp
-  RespiratoryVirus.cpp
-  Soldier.cpp
-  Virus.cpp
-  Window.cpp
-C:\kwak\Projekt\ProjectPO\ProjectPO\Window.cpp(106,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  World.cpp
+﻿  World.cpp
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(184,20): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(186,21): warning C4018: '<': signed/unsigned mismatch
@@ -31,6 +20,4 @@ C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(289,23): warning C4018: '<': signe
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(319,20): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(320,21): warning C4018: '<': signed/unsigned mismatch
 C:\kwak\Projekt\ProjectPO\ProjectPO\World.cpp(322,23): warning C4018: '<': signed/unsigned mismatch
-  Zombie.cpp
-  Generating Code...
   ProjectPO.vcxproj -> C:\kwak\Projekt\ProjectPO\Debug\ProjectPO.exe
