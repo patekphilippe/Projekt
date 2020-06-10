@@ -65,7 +65,7 @@ int World::parametriseSimulation() {
 		int populationAmount = 10;
 		int prosperityLevel = 10;
 		system("cls");
-		cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+		cout << "Welcome to simulation parametrisation system.\n"
 			 <<"ENTER to apply.\n";
 		cout << "--------------------------------------------.\n";
 		cout << "Region name: ";
@@ -73,7 +73,7 @@ int World::parametriseSimulation() {
 		while (loop1)
 		{
 			system("cls");
-			cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+			cout << "Welcome to simulation parametrisation system. \nPress arrow key UP to increase value by ten. Press arrow key DOWN to decrease value by 10\n"
 				<< "ENTER to apply.\n";
 			cout << "--------------------------------------------.\n";
 			cout << "Population amount " << populationAmount << "/" << "100";
@@ -100,7 +100,7 @@ int World::parametriseSimulation() {
 		while (loop2)
 		{
 			system("cls");
-			cout << "Welcome to simulation parametrisation system. \nKey UP for increase value by ten. Key DOWN to decrease value by 10\n"
+			cout << "Welcome to simulation parametrisation system. \nPress arrow key UP to increase value by ten. Press arrow key DOWN to decrease value by 10\n"
 				<< "ENTER to apply.\n";
 			cout << "--------------------------------------------.\n";
 			cout << "Prosperity level " << prosperityLevel << "/" << "100";

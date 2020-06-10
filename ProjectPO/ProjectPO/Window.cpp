@@ -198,11 +198,11 @@ void Window::openSimulation(int virusID) {
 				records << "\n-----------------------------------------\n";
 				records << "Month " << i + 1 << endl;
 				records << "Citizen: " << world.citizenStatistic[i] << endl;
-				records << "Death:: " << world.deathStatistic[i] << endl;
-				records << "Infected " << world.infectedStatistic[i] << endl;
+				records << "Death: " << world.deathStatistic[i] << endl;
+				records << "Infected: " << world.infectedStatistic[i] << endl;
 				records << "Medical Staff: " << world.medicalStaffStatistic[i] << endl;
 				records << "Zombie: " << world.zombieStatistic[i] << endl;
-				records << "Soldier : " << world.soldierStatistic[i] << endl;
+				records << "Soldier: " << world.soldierStatistic[i] << endl;
 				records << "\n-----------------------------------------\n";
 			}
 
