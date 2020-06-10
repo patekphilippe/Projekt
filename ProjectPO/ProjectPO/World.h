@@ -67,9 +67,9 @@ public:
 	void transmitVirus();
 	///Function of simulation that starts event of travelling. Objects migrate between regions, spreading virus all around the word.
 	void travel();
-	///Function of simulation that starts event of travelling. Objects migrate between regions, spreading virus all around the word.
+	///Function of simulation that turns people (infected by nerve virus) into zombies
 	void turnToZombie();
-	///Function of simulation that starts event of travelling. Objects migrate between regions, spreading virus all around the word.
+	///Function of simulation that substract certain amount of health from human
 	void impairHumanity();
 	///Function of simulation that forces soldiers to fight with zombies.
 	void purgeZombies();
