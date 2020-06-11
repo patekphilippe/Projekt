@@ -163,7 +163,7 @@ int World::parametriseSimulation() {
 		if (virusName == "Reproductive") return 0;
 		else if (virusName == "Nerve") return 1;
 		else if (virusName == "Respiratory") return 2;
-		else cout << "I dont understand.\n";
+		else cout << "I dont understand. Type again.\n";
 	}
 	cout << "Thank you for your cooperation. Beginning simulation...";
 	Sleep(1000);
@@ -190,7 +190,7 @@ void World::displayRegions() {
 				regions[i]->population[y]->getHealth() << " IMM:" <<
 				regions[i]->population[y]->getImmune() << " FR:" <<
 				regions[i]->population[y]->isFertile() << " IF:" <<
-				regions[i]->population[y]->getIsInfected() << " IF_N:" <<
+				regions[i]->population[y]->getIsInfected() << " IS_IN:" <<
 				regions[i]->population[y]->getInfectionName() << endl;
 		}
 		cout << "------------------------------------------" << endl;

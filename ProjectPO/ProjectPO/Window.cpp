@@ -135,14 +135,7 @@ void Window::openSimulation(int virusID) {
 		world.medicalStaffStatistic[i] = world.medicalStaffAmount;
 		world.zombieStatistic[i] = world.zombiesAmount;
 		world.soldierStatistic[i] = world.soldierAmount;
-		/*
-		cout << "Infected: " << world.infectedAmount << endl;
-		cout << "Zombies: " << world.zombiesAmount << endl;
-		cout << "Medical Staf:" << world.medicalStaffAmount << endl;
-		cout << "Soldiers: " << world.soldierAmount << endl;
-		cout << "Citizen: " << world.citizenAmount << endl;
-		cout << endl;
-		*/
+
 		system("cls");
 		world.displayRegions();
 		world.turnToZombie();

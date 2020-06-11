@@ -1,7 +1,7 @@
 #pragma once
 #include "Citizen.h"
 
-///This object inherits from Citizen class, it kills zombies.
+///This class inherits from Citizen class, it kills zombies.
 ///He can stop zombie apocalypse by destroying all zombies.
 class Soldier :
 	public Citizen

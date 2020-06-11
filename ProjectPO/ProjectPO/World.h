@@ -59,6 +59,11 @@ public:
 	/// <param name="isParametrised"></param> parameter used to check if user parametrised manually regions.
 	void setRegions(int);
 	///Function that displays current state of regions. It also shows how objects migrate between countries.
+	///
+	///IMM stands for immunity
+	///FR stands for fertility
+	///IF_N shows 1 if object is infected 0 if not
+
 	void displayRegions();
 	///Function of simulation that chooses one human and infects it - what begins simulation.
 	/// <param name="virusID"></param> parameter used to check if user parametrised manually regions. 

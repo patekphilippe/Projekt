@@ -5,7 +5,7 @@
 /// 
 ///Every region has its own economy. Economy determines amount
 ///of medical staff and soldier in this region. 
-///Moreover increases the chance of travelling human to another country.
+///Moreover increases the chance of happening travel event.
 class Region
 {
 	///influences chances of travel or exisiting Soldier/Medial staff inhabitant in region
