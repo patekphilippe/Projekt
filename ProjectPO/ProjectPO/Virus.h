@@ -7,13 +7,13 @@
 
 ///Pure abstract class from which Nerve, Reproductive and Respiratory inherits.
 ///
-///In program there are three different viruses.Their purpose is to kill humanity but
-///in different ways depending on their speciality. For example - 
-///Nerve virus turn people into zombies, that are hostile and kill Citizen, Medical Staff
+///In program there are three different types of viruse.Their purpose is to kill humanity, but
+///in different ways they are depending on their type. For example - 
+///Nerve virus turns people into zombies, that are hostile and kills Citizen, Medical Staff
 ///and Soldier. 
 ///Reproductive virus makes people sterile, so population might not be able to maintain.
-///Respiratory Virus significally lowers human immunity, what decreases his chance to survive.
-///All three viruses homever have one common thing - they have different level of mutation.
+///Respiratory Virus significally lowers human immunity, what decreases his chances to survive.
+///All three viruses have different level of mutation.
 ///Mutation substracts amount of healing human can receive.
 
 class Virus {
@@ -21,6 +21,7 @@ protected:
     std::string virusName;
 	///parameter which influences human recovery when he is infected
 	int mutation;
+	/// logical parameter that defines is virus cuarable or not
 	bool iscurable;
 public:
 	Virus();

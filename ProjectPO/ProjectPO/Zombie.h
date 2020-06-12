@@ -1,9 +1,9 @@
 #pragma once
 #include "Citizen.h"
 
-/// This class inherits from Citizen class, it infects and kill people
+/// This class inherits from Citizen class and creates zombie. It infects and kills people
 ///
-/// Zombies are hostile objects, which can eradicate humanity.
+/// Zombies are hostile objects, that can eradicate humanity.
 class Zombie :
 	public Citizen
 {

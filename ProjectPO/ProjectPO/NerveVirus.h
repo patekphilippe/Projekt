@@ -1,7 +1,7 @@
 #pragma once
 #include "Virus.h"
 
-///This class inherits from Virus. This specific virus turns people to zombies.
+///This class inherits from Virus. This specific type of virus turns people into zombies.
 class NerveVirus :public Virus {
 public:
 	/// Constructor which initializes virus parameters.

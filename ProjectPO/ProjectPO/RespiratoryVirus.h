@@ -2,7 +2,7 @@
 #include "Virus.h"
 
 ///This class inherits from Virus class
-///This specific virus lowers human immunity making him easier to kill.
+///This specific virus lowers human immunity and making him easier to kill.
 
 class RespiratoryVirus : public Virus {
 public:

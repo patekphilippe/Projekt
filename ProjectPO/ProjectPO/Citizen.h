@@ -23,23 +23,33 @@ protected:
 	int health;
 	///influences amount of healing he receives
 	int immune;
+	/// logical parameter that defines human is infected or not
 	bool isInfected;
+	/// logical parameter that defines human is sterile or not
 	bool fertile;
+	/// name of human's profession
 	std::string profession;
+	/// virus name
 	std::string infectionName;
 public:
 	Citizen();
 	Citizen(int age, int immune, std::string profession, int health, bool fertile);
+	/// returns the age of human being
 	int getAge(); 
+	/// return index of human's health
 	int getHealth();
+	/// returns a name of human's profession
 	std::string getName();
-	/// returns name of the infection he is currently infected
+	/// returns the name of the infection he is currently infected
 	std::string getInfectionName();
 	int getImmune();
 	/// returns ID of virus which can be used to identify numerically his infection.
 	/// 0 stands for reproductive, 1 for Nerve, and 2 for Respiratory.
 	int getVirusId();
+	/// returns damage, which was made by virus
 	int getDamage();
+	/// returns logical value
+	/// If human is infected, function returns "true"
 	bool getIsInfected();
 	void setisInfected(bool);
 	void setFertile(bool);

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Citizen Class Reference</title>
+<title>Virus simulation: Citizen Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Virus simulation
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -100,19 +100,17 @@ $(document).ready(function(){initNavTree('class_citizen.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 
-<p>This is base class, from which <a class="el" href="class_zombie.html" title="This class inherits from Citizen class, it infects and kill people.">Zombie</a>, <a class="el" href="class_soldier.html" title="This class inherits from Citizen class, it kills zombies.">Soldier</a>, Medical Staff inherits.  
+<p>This is base class, from which <a class="el" href="class_zombie.html" title="This class inherits from Citizen class and creates zombie.">Zombie</a>, <a class="el" href="class_soldier.html" title="This class inherits from Citizen class and creates soldiers.">Soldier</a>, Medical Staff inherits.  
  <a href="class_citizen.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="_citizen_8h_source.html">Citizen.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Citizen:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_citizen.png" usemap="#Citizen_map" alt=""/>
   <map id="Citizen_map" name="Citizen_map">
-<area href="class_medical_staff.html" title="This class inherits from Citizen class, its purpose is to heal humanity." alt="MedicalStaff" shape="rect" coords="0,56,83,80"/>
-<area href="class_soldier.html" title="This class inherits from Citizen class, it kills zombies." alt="Soldier" shape="rect" coords="93,56,176,80"/>
-<area href="class_zombie.html" title="This class inherits from Citizen class, it infects and kill people." alt="Zombie" shape="rect" coords="186,56,269,80"/>
+<area href="class_medical_staff.html" title="This class inherits from Citizen class and creates medical stuff." alt="MedicalStaff" shape="rect" coords="0,56,83,80"/>
+<area href="class_soldier.html" title="This class inherits from Citizen class and creates soldiers." alt="Soldier" shape="rect" coords="93,56,176,80"/>
+<area href="class_zombie.html" title="This class inherits from Citizen class and creates zombie." alt="Zombie" shape="rect" coords="186,56,269,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -123,13 +121,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7524770bcf716b02d0dd0e969682e032"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a7524770bcf716b02d0dd0e969682e032">Citizen</a> (int <a class="el" href="class_citizen.html#a9906c606bdbac44dcf4dc384c3a9d211">age</a>, int <a class="el" href="class_citizen.html#a7ed368d02d0e7e345fa7e952709df9a2">immune</a>, std::string <a class="el" href="class_citizen.html#a37673ba63137d9224b068ef03f6dec9c">profession</a>, int <a class="el" href="class_citizen.html#ae9a6b5c564d720b4af2d06503ad9c41f">health</a>, bool <a class="el" href="class_citizen.html#a59c3dc989768881c05a1b955d44efd26">fertile</a>)</td></tr>
 <tr class="separator:a7524770bcf716b02d0dd0e969682e032"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96e445dc5c4468d9c85faa49475c329a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a96e445dc5c4468d9c85faa49475c329a">getAge</a> ()</td></tr>
+<tr class="memdesc:a96e445dc5c4468d9c85faa49475c329a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the age of human being  <a href="class_citizen.html#a96e445dc5c4468d9c85faa49475c329a">More...</a><br /></td></tr>
 <tr class="separator:a96e445dc5c4468d9c85faa49475c329a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad89ea82c3d1f4d7c1b6021b7e111f97a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#ad89ea82c3d1f4d7c1b6021b7e111f97a">getHealth</a> ()</td></tr>
+<tr class="memdesc:ad89ea82c3d1f4d7c1b6021b7e111f97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">return index of human's health  <a href="class_citizen.html#ad89ea82c3d1f4d7c1b6021b7e111f97a">More...</a><br /></td></tr>
 <tr class="separator:ad89ea82c3d1f4d7c1b6021b7e111f97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c28a27ecdbb9cd220c12769e093ebd6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a1c28a27ecdbb9cd220c12769e093ebd6">getName</a> ()</td></tr>
+<tr class="memdesc:a1c28a27ecdbb9cd220c12769e093ebd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a name of human's profession  <a href="class_citizen.html#a1c28a27ecdbb9cd220c12769e093ebd6">More...</a><br /></td></tr>
 <tr class="separator:a1c28a27ecdbb9cd220c12769e093ebd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2620f24f7637fa3ace3969e6c0f7db7c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a2620f24f7637fa3ace3969e6c0f7db7c">getInfectionName</a> ()</td></tr>
-<tr class="memdesc:a2620f24f7637fa3ace3969e6c0f7db7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns name of the infection he is currently infected  <a href="class_citizen.html#a2620f24f7637fa3ace3969e6c0f7db7c">More...</a><br /></td></tr>
+<tr class="memdesc:a2620f24f7637fa3ace3969e6c0f7db7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the name of the infection he is currently infected  <a href="class_citizen.html#a2620f24f7637fa3ace3969e6c0f7db7c">More...</a><br /></td></tr>
 <tr class="separator:a2620f24f7637fa3ace3969e6c0f7db7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04f5731461dc43f9f35065c7a10e9032"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a04f5731461dc43f9f35065c7a10e9032">getImmune</a> ()</td></tr>
 <tr class="separator:a04f5731461dc43f9f35065c7a10e9032"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,8 +138,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4b870cb32b9f8b357e07343e2f07238a"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns ID of virus which can be used to identify numerically his infection.  <a href="class_citizen.html#a4b870cb32b9f8b357e07343e2f07238a">More...</a><br /></td></tr>
 <tr class="separator:a4b870cb32b9f8b357e07343e2f07238a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52c7c138a473bdfe4e21449156560bd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a52c7c138a473bdfe4e21449156560bd2">getDamage</a> ()</td></tr>
+<tr class="memdesc:a52c7c138a473bdfe4e21449156560bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns damage, which was made by virus  <a href="class_citizen.html#a52c7c138a473bdfe4e21449156560bd2">More...</a><br /></td></tr>
 <tr class="separator:a52c7c138a473bdfe4e21449156560bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6880eecf031f6d8954a44913b3eff588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a6880eecf031f6d8954a44913b3eff588">getIsInfected</a> ()</td></tr>
+<tr class="memdesc:a6880eecf031f6d8954a44913b3eff588"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns logical value If human is infected, function returns "true"  <a href="class_citizen.html#a6880eecf031f6d8954a44913b3eff588">More...</a><br /></td></tr>
 <tr class="separator:a6880eecf031f6d8954a44913b3eff588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d04d4c386223c7fb00e4918a7cbde9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a4d04d4c386223c7fb00e4918a7cbde9a">setisInfected</a> (bool)</td></tr>
 <tr class="separator:a4d04d4c386223c7fb00e4918a7cbde9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,16 +181,20 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a7ed368d02d0e7e345fa7e952709df9a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">influences amount of healing he receives  <a href="class_citizen.html#a7ed368d02d0e7e345fa7e952709df9a2">More...</a><br /></td></tr>
 <tr class="separator:a7ed368d02d0e7e345fa7e952709df9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0591a113b8fd6551a70b49809a0cd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a4c0591a113b8fd6551a70b49809a0cd5">isInfected</a></td></tr>
+<tr class="memdesc:a4c0591a113b8fd6551a70b49809a0cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">logical parameter that defines human is infected or not  <a href="class_citizen.html#a4c0591a113b8fd6551a70b49809a0cd5">More...</a><br /></td></tr>
 <tr class="separator:a4c0591a113b8fd6551a70b49809a0cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c3dc989768881c05a1b955d44efd26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a59c3dc989768881c05a1b955d44efd26">fertile</a></td></tr>
+<tr class="memdesc:a59c3dc989768881c05a1b955d44efd26"><td class="mdescLeft">&#160;</td><td class="mdescRight">logical parameter that defines human is sterile or not  <a href="class_citizen.html#a59c3dc989768881c05a1b955d44efd26">More...</a><br /></td></tr>
 <tr class="separator:a59c3dc989768881c05a1b955d44efd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37673ba63137d9224b068ef03f6dec9c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a37673ba63137d9224b068ef03f6dec9c">profession</a></td></tr>
+<tr class="memdesc:a37673ba63137d9224b068ef03f6dec9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">name of human's profession  <a href="class_citizen.html#a37673ba63137d9224b068ef03f6dec9c">More...</a><br /></td></tr>
 <tr class="separator:a37673ba63137d9224b068ef03f6dec9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08fd0d2561fabffce3470aaad3aab838"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_citizen.html#a08fd0d2561fabffce3470aaad3aab838">infectionName</a></td></tr>
+<tr class="memdesc:a08fd0d2561fabffce3470aaad3aab838"><td class="mdescLeft">&#160;</td><td class="mdescRight">virus name  <a href="class_citizen.html#a08fd0d2561fabffce3470aaad3aab838">More...</a><br /></td></tr>
 <tr class="separator:a08fd0d2561fabffce3470aaad3aab838"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is base class, from which <a class="el" href="class_zombie.html" title="This class inherits from Citizen class, it infects and kill people.">Zombie</a>, <a class="el" href="class_soldier.html" title="This class inherits from Citizen class, it kills zombies.">Soldier</a>, Medical Staff inherits. </p>
+<div class="textblock"><p>This is base class, from which <a class="el" href="class_zombie.html" title="This class inherits from Citizen class and creates zombie.">Zombie</a>, <a class="el" href="class_soldier.html" title="This class inherits from Citizen class and creates soldiers.">Soldier</a>, Medical Staff inherits. </p>
 <p>Object of this class represents common human being. It can travel, give birth to a children, and transmit virus with a certain chance. His immunity influences amount of healing he might receive from Medical Staff. Fertility and age determines his ability to procreate. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3951355c9f2d7260debedd29b163dbe6"></a>
@@ -298,7 +305,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Function that influences object in a way that depends on virus he is infected. </p>
-<p>Nerve virus infects object, to be later turned into <a class="el" href="class_zombie.html" title="This class inherits from Citizen class, it infects and kill people.">Zombie</a>. Reproductive virus makes object sterile. Respiratory virus lowers object immunity. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Nerve virus infects object, to be later turned into <a class="el" href="class_zombie.html" title="This class inherits from Citizen class and creates zombie.">Zombie</a>. Reproductive virus makes object sterile. Respiratory virus lowers object immunity. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">virus</td><td></td></tr>
   </table>
@@ -350,6 +357,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>returns the age of human being </p>
+
 </div>
 </div>
 <a id="a52c7c138a473bdfe4e21449156560bd2"></a>
@@ -367,6 +376,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>returns damage, which was made by virus </p>
+
 </div>
 </div>
 <a id="ad89ea82c3d1f4d7c1b6021b7e111f97a"></a>
@@ -383,6 +394,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>return index of human's health </p>
 
 </div>
 </div>
@@ -418,7 +431,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>returns name of the infection he is currently infected </p>
+<p>returns the name of the infection he is currently infected </p>
 
 </div>
 </div>
@@ -437,6 +450,8 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>returns logical value If human is infected, function returns "true" </p>
+
 </div>
 </div>
 <a id="a1c28a27ecdbb9cd220c12769e093ebd6"></a>
@@ -453,6 +468,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>returns a name of human's profession </p>
 
 </div>
 </div>
@@ -659,6 +676,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>logical parameter that defines human is sterile or not </p>
+
 </div>
 </div>
 <a id="ae9a6b5c564d720b4af2d06503ad9c41f"></a>
@@ -727,6 +746,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>virus name </p>
+
 </div>
 </div>
 <a id="a4c0591a113b8fd6551a70b49809a0cd5"></a>
@@ -749,6 +770,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>logical parameter that defines human is infected or not </p>
+
 </div>
 </div>
 <a id="a37673ba63137d9224b068ef03f6dec9c"></a>
@@ -770,6 +793,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>name of human's profession </p>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 #pragma once
 #include "Citizen.h"
 
-///This class inherits from Citizen class, its purpose is to heal humanity.
+///This class inherits from Citizen class and creates medical stuff.
 ///Medical staff tries to save as many people as possible during simulation,
 ///preventing them from extinction.
 class MedicalStaff :

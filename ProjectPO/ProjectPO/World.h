@@ -17,21 +17,21 @@
 ///World contains : inhabitants, virus and regions.
 ///Simulation of virus which infects people in this world last one year.
 ///Each month different events take place in a specific order.
-///In the beggining of simulation one of the inhabitant is infected - in
-///a random way, or specified, depending which option user chose.
-///Then humanity procreates, which increases amount of inhabitans of regions.
+///In the beggining of the simulation one of the inhabitant is infected in
+///a random  or specified way, depending on which option user chose.
+///Then humanity procreates, what increases amount of inhabitants of regions.
 ///After this, virus is spreaded all around the world. Every human
 ///has a chance to infect another from his region.
-///Next event is travelling - people can make virus even more
-///lethal by infecting people from another region. (we assume that they are irresponsible)
-///Then ones who were infected with Nerve Virus might turn into hostile zombies,
-///and every sick human have their life decrased.
+///While travelling  people can make virus  more
+///lethal by infecting people from another regions. 
+///Then those who were infected by Nerve Virus may turn into zombies,
+///and their immune decreases.
 ///In the end of month, soldiers are trying to eliminate zombies and 
-///medical staff tries to sustain humanity by healing wounded.
+///medical staff is trying to sustain humanity by healing wounded.
 ///Then the cycle repeats.
 ///Moreover data from simulation is saved in array, every index + 1
-///corresponds to the month, for example deathStatistic[0] - statics of deaths from January.
-///That statistics can be saved in txt file.
+///corresponds to the certain month, for example deathStatistic[0] - statics of human's deaths from January.
+///User can save statistics in txt file.
 class World
 {
 public:
@@ -51,26 +51,26 @@ public:
 	std::vector<Virus* > viruses;
 	///Contains all regions from which world is created
 	std::vector<Region* > regions;
-	///Function that defines procreating event - every human have a chance
-	///(if is > 18 years old) to make baby with another. If
-	///he succeds he cant do this again in this month.
+	///Function that defines propagation  - every human have a chance
+	///(if he is > 18 years old) to make a baby . If
+	///he succeed he can't do this again in this month.
 	void makeBaby();
-	///Function that sets region economics, name and amount of population.
+	///Function that sets region's economy, name of the region and amount of population.
 	/// <param name="isParametrised"></param> parameter used to check if user parametrised manually regions.
 	void setRegions(int);
-	///Function that displays current state of regions. It also shows how objects migrate between countries.
+	///Function that displays current state of regions. It also shows how humans migrate between countries.
 	///
 	///IMM stands for immunity
 	///FR stands for fertility
 	///IF_N shows 1 if object is infected 0 if not
 
 	void displayRegions();
-	///Function of simulation that chooses one human and infects it - what begins simulation.
+	///Function of simulation that chooses one human and infects it - that starts simulation.
 	/// <param name="virusID"></param> parameter used to check if user parametrised manually regions. 
 	void beginInfection(int);
 	///Function of simulation that transmits virus - every object has a chance to infect other from his inhabited region.
 	void transmitVirus();
-	///Function of simulation that starts event of travelling. Objects migrate between regions, spreading virus all around the word.
+	///Function of simulation that starts travelling. Objects migrate between regions, spreading virus all around the word.
 	void travel();
 	///Function of simulation that turns people (infected by nerve virus) into zombies
 	void turnToZombie();

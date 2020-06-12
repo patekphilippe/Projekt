@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Virus Class Reference</title>
+<title>Virus simulation: Virus Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Virus simulation
    </div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -102,17 +102,15 @@ $(document).ready(function(){initNavTree('class_virus.html',''); initResizable()
 
 <p>Pure abstract class from which Nerve, Reproductive and Respiratory inherits.  
  <a href="class_virus.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="_virus_8h_source.html">Virus.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Virus:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_virus.png" usemap="#Virus_map" alt=""/>
   <map id="Virus_map" name="Virus_map">
-<area href="class_nerve_virus.html" title="This class inherits from Virus. This specific virus turns people to zombies." alt="NerveVirus" shape="rect" coords="0,56,117,80"/>
+<area href="class_nerve_virus.html" title="This class inherits from Virus. This specific type of virus turns people into zombies." alt="NerveVirus" shape="rect" coords="0,56,117,80"/>
 <area href="class_reproductive_virus.html" title="This class inherits from Virus class This specific virus makes human sterile, preventing from procrea..." alt="ReproductiveVirus" shape="rect" coords="127,56,244,80"/>
-<area href="class_respiratory_virus.html" title="This class inherits from Virus class This specific virus lowers human immunity making him easier to k..." alt="RespiratoryVirus" shape="rect" coords="254,56,371,80"/>
+<area href="class_respiratory_virus.html" title="This class inherits from Virus class This specific virus lowers human immunity and making him easier ..." alt="RespiratoryVirus" shape="rect" coords="254,56,371,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -140,11 +138,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a004c4c5b244573920948faf753fe41e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameter which influences human recovery when he is infected  <a href="class_virus.html#a004c4c5b244573920948faf753fe41e2">More...</a><br /></td></tr>
 <tr class="separator:a004c4c5b244573920948faf753fe41e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1538bb1f76126a833e9e305d0d7d4ffd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_virus.html#a1538bb1f76126a833e9e305d0d7d4ffd">iscurable</a></td></tr>
+<tr class="memdesc:a1538bb1f76126a833e9e305d0d7d4ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">logical parameter that defines is virus cuarable or not  <a href="class_virus.html#a1538bb1f76126a833e9e305d0d7d4ffd">More...</a><br /></td></tr>
 <tr class="separator:a1538bb1f76126a833e9e305d0d7d4ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pure abstract class from which Nerve, Reproductive and Respiratory inherits. </p>
-<p>In program there are three different viruses.Their purpose is to kill humanity but in different ways depending on their speciality. For example - Nerve virus turn people into zombies, that are hostile and kill <a class="el" href="class_citizen.html" title="This is base class, from which Zombie, Soldier, Medical Staff inherits.">Citizen</a>, Medical Staff and <a class="el" href="class_soldier.html" title="This class inherits from Citizen class, it kills zombies.">Soldier</a>. Reproductive virus makes people sterile, so population might not be able to maintain. Respiratory <a class="el" href="class_virus.html" title="Pure abstract class from which Nerve, Reproductive and Respiratory inherits.">Virus</a> significally lowers human immunity, what decreases his chance to survive. All three viruses homever have one common thing - they have different level of mutation. Mutation substracts amount of healing human can receive. </p>
+<p>In program there are three different types of viruse.Their purpose is to kill humanity, but in different ways they are depending on their type. For example - Nerve virus turns people into zombies, that are hostile and kills <a class="el" href="class_citizen.html" title="This is base class, from which Zombie, Soldier, Medical Staff inherits.">Citizen</a>, Medical Staff and <a class="el" href="class_soldier.html" title="This class inherits from Citizen class and creates soldiers.">Soldier</a>. Reproductive virus makes people sterile, so population might not be able to maintain. Respiratory <a class="el" href="class_virus.html" title="Pure abstract class from which Nerve, Reproductive and Respiratory inherits.">Virus</a> significally lowers human immunity, what decreases his chances to survive. All three viruses have different level of mutation. Mutation substracts amount of healing human can receive. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8d2b6d6312a36c3d364659b7f8fc5580"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d2b6d6312a36c3d364659b7f8fc5580">&#9670;&nbsp;</a></span>Virus() <span class="overload">[1/2]</span></h2>
@@ -298,6 +297,8 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>logical parameter that defines is virus cuarable or not </p>
 
 </div>
 </div>
